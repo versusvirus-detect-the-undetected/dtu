@@ -12,14 +12,17 @@ Web-based tool for epidemic outbreak development monitoring & prediction
 
 Selection criteria from 1_versus_virus:
 
-Relevance for Swiss ecosystem
-Relevance for the solution in addressing the specific challenge
-Potential for impact on the long term /  If and how they imagine to continue
-Progress achieved in the last 48 hours
+- Relevance for Swiss ecosystem
 
-(deliveries go here) 
+- Relevance for the solution in addressing the specific challenge
+
+- Potential for impact on the long term /  If and how they imagine to continue
+
+- Progress achieved in the last 48 hours
+
+(deliveries go here)
+
 - mini-video
-
 
 - presentation (with executive summary)
 
