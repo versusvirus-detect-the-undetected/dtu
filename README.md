@@ -3,6 +3,7 @@ Web-based tool for epidemic outbreak development monitoring & prediction
 
 ## 1 Use case description (qwertzuiop)
 (use cases go here)
+
 How can the number of undetected infection or infections with mild symptoms be reduced or better estimated?
 
 No symptoms 
