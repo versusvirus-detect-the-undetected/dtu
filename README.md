@@ -28,11 +28,11 @@ This API verifies and/or creates trusted geolocations from user self-diagnostic 
 
 ## API data type definition   
 
-user data {
-    GUID (global user ID): string
-    age - Integer value as string
-
-    sex - string value (options “male”, “female”, "m", "f"
+```user data {
+GUID (global user ID): string
+age: Integer value as string
+sex: String 
+    
     geoposition-latitude: float value as string
     
     geoposition-longitude: float value as string
@@ -52,9 +52,9 @@ user data {
     diagnostics-is_immunized: boolean as string
 }
 
-api-auth-data {
-    auth-token: value as string
-    auth-token-user-type: string (options: user, agent, appliance)
+api-auth-data 
+
+    auth-token: value as stringauth-token-user-type: string (options: user, agent, appliance)
 }
 
 type-auth-agent {
