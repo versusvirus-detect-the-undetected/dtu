@@ -31,9 +31,8 @@ This API verifies and/or creates trusted geolocations from user self-diagnostic 
 user data {
     GUID (global user ID): string
     age - Integer value as string
-    
-    sex - string value (options “male”, “female”, "m", "f")
-    
+
+    sex - string value (options “male”, “female”, "m", "f"
     geoposition-latitude: float value as string
     
     geoposition-longitude: float value as string
