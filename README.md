@@ -29,8 +29,11 @@ This API verifies and/or creates trusted geolocations from user self-diagnostic 
 ## API data type definition   
 
 ```user data {
+
 GUID (global user ID): string
+
 age: Integer value as string
+
 sex: String 
     
     geoposition-latitude: float value as string
