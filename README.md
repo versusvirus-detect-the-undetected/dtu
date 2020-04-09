@@ -33,23 +33,14 @@ user data {
     GUID (global user ID): string
     age: Integer value as string
     sex: String 
-    
     geoposition-latitude: float value as string
-    
     geoposition-longitude: float value as string
-    
     geoposition-precision: integer as string
-    
     diagnostics-has_cough: boolean as string
-    
     diagnostics-has_fever: boolean as string
-    
     diagnostics-fever-temperature: float as string
-    
     diagnostics-has_taste_loss: boolean as string
-    
     diagnostics-has_tested_positive: boolean as string
-    
     diagnostics-is_immunized: boolean as string
 }
 
