@@ -64,18 +64,32 @@ api-alert data {
     alert_timezone: string
     alert_severity_level: integer as string
 }
-
+```
 ## API function calls
+```
 
+```
 ### get_latest_user_data(api-auth-data, GUID)
+```
 
+```
 ### get_user_ts_data(api_auth_data,GUID);
+```
 
+```
 ### get_users(api-auth-data, pagination as integer);
+```
 
+```
 ### get_user_dataset_list(api-auth-data, pagination as integer);
+```
 
+```
 ### push_user_alert(api-auth-data, GUID);
+```
 
+```
 ### create_user(api_auth_data)
+```
 
+```
