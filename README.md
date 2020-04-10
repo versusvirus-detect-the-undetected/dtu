@@ -40,12 +40,12 @@ Time-series JSON diagnostic message dataset, with (bogus) example data.
     "user-tx-timestamp":"1586483743"                                   // user transmission GMT time, unix UTC-timestamp, as string
     "user-tx_tz":"+0100"                                               // user timezone, string concatenation of "+" or "-" with "hhmm" time format, excluding daylight saving time, as string 
     "agent-tx-timestamp":"1586485743"                                  // agent transmission GMT time, unix UTC-timestamp, as string
-    "agent-tx_tz":"+0100"                                              // agent timezone, string concatenation of "+" or "-" with "hhmm" time format, excluding daylight saving time, as string                                      
+    "agent-tx_tz":"+0100"                                              // agent timezone, string concatenation of "+" or "-" with "hhmm" time format, excluding daylight saving time, as string
+    "agent-gps-lat:"46.9465"                                           // GPS latitude, float value as string
+    "agent-gps-long":"7.4443"                                          // GPS longitude, float value as string
+    "agent-gps-prec":"50"                                              // GPS precision in meters, integer as string
     "age":"55"                                                         // age, int as string
     "sex":"m"                                                          // sex, string, "f" = female, "m" = male 
-    "gps-lat:"46.9465"                                                 // GPS latitude, float value as string
-    "gps-long":"7.4443"                                                // GPS longitude, float value as string
-    "gps-prec":"50"                                                    // GPS precision in meters, integer as string
     "infectuous_proximity":"0"                                         // infectuous proximity warning flag, boolean value, default = "0", as string   
     "self-diag-has_fever": "1"                                         // symptom, fever, boolean, as string
     "self-diag-body-temp-scale":"C"                                    // temperature scale, "C" = Celsius, "F" = Fahrenheit, as string
