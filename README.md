@@ -1,15 +1,15 @@
 # Covid19Clue messaging API specification v0.1 - DTU (detect the undetected)
 
-Application reconnect messaging API specification for covid19 diagnostic data. Enables to re-connect all kinds of third-party apps safely to exchange real-time diagnostic data as messages. Moreover, this messaging API specification defines also the messages allowing to officially authorize and authenticate a wide range of reconnected covid19 apps as trusted apps. This can  be achieved by national and international official public health organizations such as e.g. the Swiss Federal Public Health Office or the World Health Organization.
+An application reconnect messaging API specification for covid19 diagnostic data. Enables to re-connect all kinds of third-party apps safely to exchange real-time diagnostic data as messages. Moreover, this messaging API specification defines also the messages allowing to officially authorize and authenticate a wide range of reconnected covid19 apps as trusted apps. This can  be achieved by national and international official public health organizations such as e.g. the Swiss Federal Public Health Office or the World Health Organization.
 
-## 1 API usage scenarios and basic use cases description
+## 1 API usage scenarios description
 
-### 1.1. Covid19Clue API for mobile 3rd-party apps (API end-point scenario)
+### 1.1 Covid19Clue API for mobile 3rd-party apps (API end-point scenario)
 Re-connect 3rd-party mobile apps to government, doctors, brand them "official".
 Provide user symptoms and geo data for predictions for all 3rd-party dashboard apps, epidemiologic dashboards
 Consent-based self-diagnostics collection and official geolocator data API service for 3rd-party apps.
 
-### 1.2. Covid19Clue API for officials (BAG, doctors) (API end-point scenario)
+### 1.2 Covid19Clue API for officials (BAG, doctors) (API end-point scenario)
 This API reconnects 3rd-party big-data apps for epidemiologics & prediction in governments as well as 3rd party health care apps for physicians' patient management to get infection data in near-real time. It also helps doctors to speed up work dispenses in case of positive test results, and respective quarantining
 
 
@@ -22,7 +22,7 @@ Re-connect 3rd- party mobile apps to government, doctors, brand them "official")
 
 App/Session token-based authentication (tbd) 
 
-### 1.5 Covid19Clue API Geolocator (API back-end scenario)
+### 1.5 Covid19Clue API authorization (API end-point scenario)
 
 This API verifies and/or creates trusted geolocations from user self-diagnostic time-series data from 3rd-party apps.
 
