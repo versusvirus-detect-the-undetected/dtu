@@ -32,7 +32,7 @@ This API verifies and/or creates trusted geolocations from user self-diagnostic 
 
 ### 2.1 user-diag
 
-Time-series JSON diagnostic message dataset.  
+Time-series JSON diagnostic message dataset, with (bogus) example data.  
 ```
 "diag": {
     "profile":"369e1fac-820b-4695-98a4-e22901584e0c"                   // pseudonymous diagnostic profile v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string
@@ -73,7 +73,7 @@ Time-series JSON diagnostic message dataset.
 ```
 ### 2.2 agent-authn
 
-Time-series JSON agent authentication message dataset.  
+Time-series JSON agent authentication message dataset, with (bogus) example data.    
 ```
 "agent-authn": {                                                   
     "authn-agent":"d303aea7-3604-46c5-84c9-ad2758fb2852"                               // agent v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string                                              
@@ -85,7 +85,7 @@ Time-series JSON agent authentication message dataset.
 ```
 ### 2.3 agent-authr
 
-JSON agent authorization dataset.  
+JSON agent authorization dataset, with (bogus) data examples.    
 ```
 "agent-authr": {
     "agent":"d303aea7-3604-46c5-84c9-ad2758fb2852"                               // agent v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string
@@ -96,8 +96,8 @@ JSON agent authorization dataset.
     "agent-admin":"contact-authr"                                                // Authorized Agent admin contact, as "contact-authr"
 }
 ```
-### 2.4 contact-authr
-JSON contact authorization dataset. 
+### 2.4 contact-authr  
+JSON contact authorization dataset, with (bogus) example data.
 ```
 "contact-authr": {
     "contact": "4e8f2603-4591-4392-952f-bfbe86bd06eb"                                              // agent contact v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string
