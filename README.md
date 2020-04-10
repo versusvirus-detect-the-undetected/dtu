@@ -38,53 +38,53 @@ This API specification defines app and app contact authorization record types.
 JSON-like diagnostic profile message record for time series, with (bogus) example data.  
 ```
 "profile-msg": {
-    "profile":"369e1fac-820b-4695-98a4-e22901584e0c"                   // pseudonymous diagnostic profile v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string
-    "agent":"d303aea7-3604-46c5-84c9-ad2758fb2852"                     // agent v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string
-    "user-tx-timestamp":"1586483743"                                   // user transmission GMT time, unix UTC-timestamp, as string
-    "user-tx_tz":"+0100"                                               // user timezone, string concatenation of "+" or "-" with "hhmm" time format, excluding daylight saving time, as string 
-    "agent-tx-timestamp":"1586485743"                                  // agent transmission GMT time, unix UTC-timestamp, as string
-    "agent-tx-tz":"+0100"                                              // agent timezone, string concatenation of "+" or "-" with "hhmm" time format, excluding daylight saving time, as string
-    "agent-gps-lat:"46.9465"                                           // GPS latitude, float value as string
-    "agent-gps-long":"7.4443"                                          // GPS longitude, float value as string
-    "agent-gps-prec":"50"                                              // GPS precision in meters, integer as string
-    "age":"55"                                                         // age, int as string
-    "sex":"m"                                                          // sex, string, "f" = female, "m" = male 
-    "infectuous_proximity":"0"                                         // infectuous proximity warning flag, boolean value, default = "0", as string   
-    "self-diag-has_fever": "1"                                         // symptom, fever, boolean, as string
-    "self-diag-body-temp-scale":"C"                                    // temperature scale, "C" = Celsius, "F" = Fahrenheit, as string
-    "self-diag-body-temp":"38.9"                                       // body temperature, float, as string 
-    "self-diag-oxy-level: "96"                                         // oxygen level percentage, integer, as string
-    "self-diag-cough-sound-AI-result: "74"                             // cough-sound-AI-correspondance percentage, integer, as string
-    "self-diag-has-dry-cough":"0"                                      // symptom, dry cough, boolean value, as string
-    "self-diag-has-freq-sneezing":"0"                                  // symptom, frequent sneezing, boolean value, as string
-    "self-diag-has-short-breath:"1"                                    // symptom, short breath, boolean value, as string 
-    "self-diag-has-breath-difficult:"0"                                // symptom, difficulty breathing, boolean value, as string 
-    "self-diag-has-taste-loss":"0"                                     // symptom, taste loss, boolean value, as string
-    "self-diag-has-diarrhea":"0"                                       // symptom, diarrhea, boolean value, as string
-    "self-diag-has-constipation:"0"                                    // symptom, constipation, boolean value, as string
-    "self-diag-has-stool_color-change:"1"                              // symptom, stool color change, boolean value, as string
-    "self-diag-has-urine-color-change:"0"                              // symptom, urine color change, boolean value, as string 
-    "self-diag-has-migraine-like-ache:"1"                              // symptom, migraine-like headache, boolean value, as string 
-    "self-diag-has-bodyskin-rash":"1"                                  // symptom, sudden body skin rash, boolean value, as string
-    "self-diag-has-pruritus":"1"                                       // symptom, pruritus (itching), boolean value, default = 0, as string
-    "self-diag-has-tachycardy:"1"                                      // symptom, tachycardy at rest, boolean value, default = "0", as string
-    "self-diag-has-cardial-arrhythmy:"0"                               // symptom, cardial arrhythmy, boolean value, default = "0", as string 
-    "vrfd-diag-has-virustest:"0"                                       // verified tested for virus, boolean value, default = "0", as string 
-    "vrfd-diag-virustest-result:"0"                                    // verified virus test result, boolean value, default = "0", as string       
-    "vrfd-diag-immunetest-result:"0"                                   // verified immune test result, boolean value, default = "0", as string
-     vrfd-is-plasma-donor:"0"                                          // verified plasma donor, boolean value, default = "0", as string
+    "profile":"369e1fac-820b-4695-98a4-e22901584e0c"                   // pseudonymous diagnostic profile v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string, mandatory
+    "agent":"d303aea7-3604-46c5-84c9-ad2758fb2852"                     // agent v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string, mandatory
+    "user-tx-timestamp":"1586483743", optional                         // user transmission GMT time, unix UTC-timestamp, as string
+    "user-tx_tz":"+0100"                                               // user timezone, string concatenation of "+" or "-" with "hhmm" time format, excluding daylight saving time, as string, optional 
+    "agent-tx-timestamp":"1586485743"                                  // agent transmission GMT time, unix UTC-timestamp, as string, mandatory
+    "agent-tx-tz":"+0100", mandatory                                   // agent timezone, string concatenation of "+" or "-" with "hhmm" time format, excluding daylight saving time, as string
+    "agent-gps-lat:"46.9465"                                           // GPS latitude, float value, as string, optional
+    "agent-gps-long":"7.4443"                                          // GPS longitude, float value, as string, optional
+    "agent-gps-prec":"50"                                              // GPS precision in meters, integer as string, optional
+    "age":"55"                                                         // age, integer as string, optional 
+    "sex":"m"                                                          // sex, string, "f" = female, "m" = male, optional 
+    "infectuous_proximity":"0"                                         // infectuous proximity warning flag, boolean value, default = "0", as string, optional   
+    "self-diag-has_fever": "1"                                         // symptom, fever, boolean, as string, optional
+    "self-diag-body-temp-scale":"C"                                    // temperature scale, "C" = Celsius, "F" = Fahrenheit, as string, optional
+    "self-diag-body-temp":"38.9"                                       // body temperature, float, as string, optional 
+    "self-diag-oxy-level: "96"                                         // oxygen level percentage, integer, as string, optional
+    "self-diag-cough-sound-AI-result: "74"                             // cough-sound-AI-correspondance percentage, integer, as string, optional
+    "self-diag-has-dry-cough":"0"                                      // symptom, dry cough, boolean value, default = "0" as string, optional
+    "self-diag-has-freq-sneezing":"0"                                  // symptom, frequent sneezing, boolean value, default = "0"  as string, optional
+    "self-diag-has-short-breath:"1"                                    // symptom, short breath, boolean value, default = "0" as string, optional 
+    "self-diag-has-breath-difficult:"0"                                // symptom, difficulty breathing, boolean value, as string, optional 
+    "self-diag-has-taste-loss":"0"                                     // symptom, taste loss, boolean value, default = "0", as string, optional 
+    "self-diag-has-diarrhea":"0"                                       // symptom, diarrhea, boolean value, default = "0" as string
+    "self-diag-has-constipation:"0"                                    // symptom, constipation, boolean value, default = "0" as string, optional
+    "self-diag-has-stool_color-change:"1"                              // symptom, stool color change, boolean value, default = "0", as string, optional
+    "self-diag-has-urine-color-change:"0"                              // symptom, urine color change, boolean value, default = "0", as string, optional  
+    "self-diag-has-migraine-like-ache:"1"                              // symptom, migraine-like headache, boolean value, default ="0",  as string optional 
+    "self-diag-has-bodyskin-rash":"1"                                  // symptom, sudden body skin rash, boolean value, default ="0", as string, optional
+    "self-diag-has-pruritus":"1"                                       // symptom, pruritus (itches), boolean value, default = "0", as string, optional
+    "self-diag-has-tachycardy:"1"                                      // symptom, tachycardy at rest, boolean value, default = "0", as string, optional
+    "self-diag-has-cardial-arrhythmy:"0"                               // symptom, cardial arrhythmy, boolean value, default = "0", as string, optional 
+    "vrfd-diag-has-virustest:"0"                                       // verified tested for virus, boolean value, default = "0", as string, optional 
+    "vrfd-diag-virustest-result:"0"                                    // verified virus test result, boolean value, default = "0", as string, optional       
+    "vrfd-diag-immunetest-result:"0"                                   // verified immune test result, boolean value, default = "0", as string, optional
+     vrfd-is-plasma-donor:"0"                                          // verified plasma donor, boolean value, default = "0", as string, optional
     "stage":"1"                                                        // "0" = undiagnosed,
                                                                        // "1" = self-diagnosed,       
                                                                        // "2" = verified-diagnosed-negative,
                                                                        // "3" = verified-diagnosed-positive,
-                                                                       // integer, as string
+                                                                       // integer, as string, optional
 
    "quarantine":"1"                                                    // "0" = shelter-at-home-commuting,
                                                                        // "1" = shelter-at-home-permanent,  
                                                                        // "2" = ordered-at-home,       
                                                                        // "3" = hospitalized,   
                                                                        // "4" = immunized-released,
-                                                                       // integer, as string
+                                                                       // integer, as string, optional
 }
 ```
 ### 2.2 Agent authentication message record 
@@ -98,7 +98,7 @@ JSON-like agent authentication message record for time series, with (bogus) exam
     "timestamp:"1586485642"                                                      // Authentication GMT time, unix UTC-timestamp, as string 
     "tz":"+0100"                                                                 // Authentication timezone, string concatenation of "+" or "-" with "hhmm" time format, excluding daylight saving time, as string 
     "session-timeout":"3600"                                                     // Authentication timeout, in seconds, as string    
-}
+}                                                                                // all fields are mandatory   
 ```
 ### 2.3 Contact authentication message record 
 
@@ -112,7 +112,7 @@ JSON-like agent contact authentication message record for time series, with (bog
     "timestamp:"1586485642"                                                      // Authentication GMT time, unix UTC-timestamp, as string 
     "tz":"+0100"                                                                 // Authentication timezone, string concatenation of "+" or "-" with "hhmm" time format, excluding daylight saving time, as string 
     "session-timeout":"3600"                                                     // Authentication timeout, in seconds, as string    
-}
+}                                                                                // all fields are mandatory   
 ```
 ### 2.3 Agent authorization record
 
@@ -124,7 +124,7 @@ JSON-like agent authorization record, with (bogus) data examples.
     "tz":"+0100"                                                                 // Authorization time zone, string concatenation of "+" or "-" with "hhmm" time format, excluding daylight saving time, as string 
     "authorization":"0"                                                          // valid authorization, default = "0" = false, "1" = true
     "type":"user-app"                                                            // Authorization type, "profile-app", "health-app","research-app", "test-lab", "test-site", "self-test-appliance", "nho", "gho", "source", as string
-}
+}                                                                                // all fields are mandatory   
 ```
 ### 2.4 Contact authorization record 
 
@@ -142,13 +142,13 @@ JSON-like contact authorization record, with (bogus) example data.
      "agent-org-spoc-usermail": "mailto:admin-at-covidtracker.ch"                                  // valid mail uri, as string
      "agent-org-spoc-password: "2207f568da6b4d1ba8a9cdebb18d5c79847a4fb23a41b27489a3c6d84aeab215"  // sha-256 salted password hash, as string  
      "agent-org-spoc-tel-intl":"41123456789"                                                       // valid international phone number, as string
-     "agent-org-spoc-tel-ext:"12345"                                                               // internal extension, as string     
+     "agent-org-spoc-tel-ext:"12345"                                                               // internal extension, as string, optional     
      "agent-org-addr-line-1: "1234, Main Street"                                                   // address line 1, as string                                                                    
-     "agent-org addr-line-2: "P.O. Box 1234"                                                       // address line 2, as string 
+     "agent-org addr-line-2: "P.O. Box 1234"                                                       // address line 2, as string, optional 
      "agent-org-city: "Bern"                                                                       // city, as string
      "agent-org-zip: "3000"                                                                        // Postal code, as string     
      "agent-org-region":"BE"                                                                       // region or county code, as string 
      "agent-org-country":"Switzerland"                                                             // Country, as string 
-}
+}                                                                                                  // fields are mandatory, exceptions see field comments. 
 ``` 
 
