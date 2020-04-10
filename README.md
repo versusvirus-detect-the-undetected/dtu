@@ -32,7 +32,7 @@ This API verifies and/or creates trusted geolocations from user self-diagnostic 
 
 ### 2.1 diag-data
 
-Time-series dataset definition for messaging system. All personal diag data is optional, UUID for user, agent is mandatory.  
+Time-series dataset definition for messaging system. All data is optional, except UUIDs for the user and the agent, is mandatory.  
 ```
 "diag-data": {
     "user":"369e1fac-820b-4695-98a4-e22901584e0c"                      // v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string
