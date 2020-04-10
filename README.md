@@ -47,11 +47,11 @@ Main dataset definition for messaging system time series. All personal diag data
     "self-diag-has_fever": "1"                                         // boolean, as string
     "self-diag-temp-scale":"C"                                         // "C" = Celsius, "F" = Fahrenheit, as string  
     "self-diag-fever-temp":"38.9"                                      // float, as string 
-    "self-diag-has_dry-cough":"0"                                      // boolean value, as string 
-    "self-diag-has_taste-loss":"0"                                     // boolean value, as string 
-    "vrfd-diag-has_test-positive:"0"                                   // boolean value, as string       
+    "self-diag-has-dry-cough":"0"                                      // boolean value, as string 
+    "self-diag-has-taste-loss":"0"                                     // boolean value, as string 
+    "vrfd-diag-has-test-positive:"0"                                   // boolean value, as string       
     "vrfd-test-positive-by":"6620a86f-e87c-4566-9a45-b8ea32a2885d"     // testing agent's UUID, v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string
-    "vrfd-has-test_immunized:"0"                                       // boolean value, as string  
+    "vrfd-has-test-immunized:"0"                                       // boolean value, as string  
     "vrfd-test-positive-by":"8dbee094-90d7-4faa-9e5f-fdad0ed4a7a3"     // string, testing agent-UUID, v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4
 }
 ```
