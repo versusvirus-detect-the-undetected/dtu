@@ -129,8 +129,8 @@ JSON contact authorization dataset, with (bogus) example data.
 "contact-authr": {
     "contact": "4e8f2603-4591-4392-952f-bfbe86bd06eb"                                              // agent contact, v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string
      "agent":"d303aea7-3604-46c5-84c9-ad2758fb2852"                                                // agent, v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string
-     "timestamp:"1586485642"                                                      // Authorization GMT time, unix UTC-timestamp, as string 
-    "tz":"+0100"                                                                 // Authorization time zone, string concatenation of "+" or "-" with "hhmm" time format, excluding daylight saving time, as string 
+     "timestamp:"1586485642"                                                                       // Authorization GMT time, unix UTC-timestamp, as string 
+    "tz":"+0100"                                                                                   // Authorization time zone, string concatenation of "+" or "-" with "hhmm" time format, excluding daylight saving time, as string 
      "agent-name":"Covidtracker"                                                                   // agent name, as string 
      "agent-url":"https://covidtracker.ch"                                                         // valid url, as string 
      "agent-org-fqdn": "covidtracker.ch"                                                           // valid org domain, as string 
