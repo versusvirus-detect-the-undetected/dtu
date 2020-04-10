@@ -30,16 +30,16 @@ This API verifies and/or creates trusted geolocations from user self-diagnostic 
 
 ## 2. Covid19Clue API JSON data type definition
 
-### 2.1 diag-data
+### 2.1 user-diag
 
 Time-series dataset definition for messaging system. All data is optional, except UUIDs for the user and the agent, is mandatory.  
 ```
-"diag-data": {
+"user-diag": {
     "user":"369e1fac-820b-4695-98a4-e22901584e0c"                      // v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string
     "agent":"d303aea7-3604-46c5-84c9-ad2758fb2852"                     // v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string
-    "user-tx-timestamp":"                                              // user transmission time, unix UTC-timestamp, as string
+    "user-tx-timestamp":""                                             // user transmission time, unix UTC-timestamp, as string
     "user-tx_tz":"+0100"                                               // user timezone, string concatenation of "+" or "-" with "hhmm" time format, excluding daylight saving time, as string 
-    "agent-tx-timestamp":"                                             // agent transmission time, unix UTC-timestamp, as string
+    "agent-tx-timestamp":"1586485743"                                  // agent transmission time, unix UTC-timestamp, as string
     "agent-tx_tz":"+0100"                                              // agent timezone, string concatenation of "+" or "-" with "hhmm" time format, excluding daylight saving time, as string  
     "age":"55"                                                         // age, int as string
     "sex":"m"                                                          // sex, string, "f" = female, "m" = male 
@@ -64,20 +64,27 @@ Time-series dataset definition for messaging system. All data is optional, excep
     "self-diag-has-pruritus":"1"                                       // symptom, pruritus (itching), boolean value, as string
     "self-diag-has-tachycardy:"1"                                      // symptom, tachycardy at rest, boolean value, as string
     "self-diag-has-cardial-arrhythmy:"0"                               // symptom, cardial arrhythmy, boolean value, as string 
-    "vrfd-diag-virustest-result:"0"                                    // verfied virus test result, "0" = negative, "1" = positive, boolean value, as string       
-    "vrfd-diag-immunetest-result:"0"                                   // verfied immune test result, "0" = negative, "1" = positive, boolean value, as string       
+    "vrfd-diag-has-virustest:"0"                                       // tested for virus, default = "0" = No, "1" = "Yes"   
+    "vrfd-diag-virustest-result:"0"                                    // verfied virus test result, default = "0" = negative, "1" = positive, boolean value, as string       
+    "vrfd-diag-immunetest-result:"0"                                   // verfied immune test result, default = "0" = negative, "1" = positive, boolean value, as string       
 }
 ```
-### 2.2 authn-data
+### 2.2 agent-authn
 
-Time-series authentication dataset.  
+Time-series agent authentication dataset.  
 ```
-"authr-data": {
+"authn-data": {
     "authn-token":"216f00f4be13890449c1852cffd7a8bd9557258eacda56e0b4e8166b943405cc"   // SHA-256 hash code, as string                                                    
-    "authn-agent":"d303aea7-3604-46c5-84c9-ad2758fb2852"                          // v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string                                              
+    "authn-agent":"d303aea7-3604-46c5-84c9-ad2758fb2852"                               // v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string                                              
+    "authn-timestamp:"1586485642" 
     "authn-timeout":"3600"                                                             // seconds, as string    
-    }
 }
+```
+### 2.3 agent-authr
+
+Time-series agent authorization dataset.  
+```
+
 ```
 ## API function calls
 ```
