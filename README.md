@@ -1,26 +1,26 @@
-# Covid19Clue API specification v0.1 - DTU (detect the undetected)
+# Covid19Clue API message specification v0.1 - DTU (detect the undetected)
 
-A messaging application programming interface (API) specification for covid19 diagnostic data. Enables to re-connect all kinds of disparate third-party covid19 apps safely and securely to exchange diagnostic profile data as messages. Moreover, this messaging API specification defines also the messages allowing to officially authorize and authenticate a wide range of re-connected covid19 apps as trusted apps. This can  be achieved by national and international official public health organizations such as e.g. the Swiss Federal Public Health Office or the World Health Organization.
+A application programming interface (API) message specification for covid19 diagnostic data. Enables to re-connect all kinds of disparate third-party covid19 apps safely and securely, to exchange pseudonymous diagnostic profile data. Moreover, this message API specification defines also the messages allowing to officially authorize and authenticate a wide range of re-connected covid19 apps as trusted apps. This can  be achieved by national and international official public health organizations such as e.g. the Swiss Federal Public Health Office or the World Health Organization.
 
-## 1 API usage scenarios description
+## 1 Covid19Clue API usage scenarios description
 
-### 1.1 Covid19Clue API end-point scenario for mobile 3rd-party apps 
+### 1.1 Covid19Clue API message end-point scenario for mobile 3rd-party apps 
 
 Re-connect 3rd-party mobile apps via this endpoint. Provide pseudonymous user diagnosis profile message records for predictions for all 3rd-party public health dashboard apps, epidemiologic dashboards via a messaging API service.
 
-### 1.2 Covid19Clue API end-point scenario description for health offices, hospitals and physicians 
+### 1.2 Covid19Clue API message end-point scenario description for health offices, hospitals and physicians 
 
 This API end-point reconnects 3rd-party big-data apps for epidemiologics & prediction in governments as well as 3rd party health care apps for physicians' patient management to get infection data and patient profiles in near-real time. It e.g. helps physicians to speed up writing and revoking work dispenses in case of positive test results and/or ordered quarantine, hospitalization, etc.
 
-### 1.3 Covid19Clue API  end-point scenario description for test labs, home appliances 
+### 1.3 Covid19Clue API message end-point scenario description for test labs, home appliances 
 
 This API end-point scenario connects to Test Lab computers and appliances, as well as home testing appliances IoT (Internet-of-Things) in a machine-to-machine future.
 
-### 1.4 Covid19Clue API  end-point scenario description for authentication 
+### 1.4 Covid19Clue API message end-point scenario description for authentication 
 
 This API end-point specification defines app session and token-based authentication message record types. 
 
-### 1.5 Covid19Clue API  end-point scenario for authorization 
+### 1.5 Covid19Clue API end-point scenario for authorization 
 
 This API specification defines app and app contact authorization record types. 
 
@@ -29,7 +29,7 @@ This API specification defines app and app contact authorization record types.
 
 ### 2.1 Profile message record
 
-Time-series JSON-like diagnostic profile message record, with (bogus) example data.  
+JSON-like diagnostic profile message record for time series, with (bogus) example data.  
 ```
 "profile-msg": {
     "profile":"369e1fac-820b-4695-98a4-e22901584e0c"                   // pseudonymous diagnostic profile v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string
@@ -81,9 +81,9 @@ Time-series JSON-like diagnostic profile message record, with (bogus) example da
                                                                        // integer, as string
 }
 ```
-### 2.2 Agent authentication message record
+### 2.2 Agent authentication message record 
 
-Time-series JSON-like agent authentication message record, with (bogus) example data.    
+Time-series JSON-like agent authentication message record for time series, with (bogus) example data.    
 ```
 "agent-authn-msg": {                                                   
     "agent":"d303aea7-3604-46c5-84c9-ad2758fb2852"                               // agent v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string                                              
@@ -94,9 +94,9 @@ Time-series JSON-like agent authentication message record, with (bogus) example 
     "session-timeout":"3600"                                                     // Authentication timeout, in seconds, as string    
 }
 ```
-### 2.3 Contact authentication message record
+### 2.3 Contact authentication message record 
 
-Time-series JSON-like agent contact authentication message record, with (bogus) example data.    
+Time-series JSON-like agent contact authentication message record for time series, with (bogus) example data.    
 ```
 "contact-authn-msg": {                                                   
     "contact":"4e8f2603-4591-4392-952f-bfbe86bd06eb"                             // contact v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string
