@@ -26,11 +26,13 @@ App/Session token-based authentication (tbd)
 
 This API verifies and/or creates trusted geolocations from user self-diagnostic time-series data from 3rd-party apps.
 
-## 2. API JSON data type definition (time series)   
+## 2. API JSON data type definition (time series)
+
+### 2.1 diag-data
 ```
 diag-data {
     "user":"369e1fac-820b-4695-98a4-e22901584e0c"                      // string 4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4
-    "agent":"d303aea7-3604-46c5-84c9-ad2758fb2852"                      // string 4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4
+    "agent":"d303aea7-3604-46c5-84c9-ad2758fb2852"                     // string 4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4
     "tx-timestamp":"                                                   // UTC-timestamp
     "age":"55"                                                         // int as string
     "sex":"m"                                                          // string, "f" = female, "m" = male, 
@@ -47,16 +49,20 @@ diag-data {
     "vrfd-has-test_immunized:"0"                                       // boolean as string  
     "vrfd-test-positive-by":"8dbee094-90d7-4faa-9e5f-fdad0ed4a7a3"     // string, testing agent-UUID string 4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4
 }
-
-api-auth-data {
+```
+### 2.2 auth-data
+```
+auth-data {
     "auth-token":
     "auth-token-type": value as stringauth-token-user-type: string (options: user, agent)
     auth-agent { 
         agent UUID - hashed value as string
     }
 }
+```
+### 2.3 alert-data 
 
-api-alert data {
+alert-data {
     to_user: GUID as string
     alert_message: string
     alert_GMT_timestamp: datetime as string
