@@ -80,7 +80,7 @@ Time-series dataset definition for messaging system. All personal diag data is o
 "alert-data": {
     "alert-rcpt":"369e1fac-820b-4695-98a4-e22901584e0c" // user UUID, v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string
     "alert-message":"You tested covid19 negative."      // alert message, as string
-    "alert-UTC_timestamp":"1586485642"                  // unix UTC timestamp, as string
+    "alert-timestamp":"1586485642"                      // unix UTC timestamp, as string
     "alert-tz":"+0100"                                  // string concatenation of "+" or "-" with "hhmm" time format, excluding daylight saving time, as string  
     "alert-locale":"de_ch"                              // unix locale,  as string
     "alert-type":"1"                                    // type, 1 - user message, 2 - system message, integer as string
