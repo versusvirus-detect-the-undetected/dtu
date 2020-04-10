@@ -97,12 +97,12 @@ Time-series JSON agent authentication message record, with (bogus) example data.
     "session-timeout":"3600"                                                     // Authentication timeout, in seconds, as string    
 }
 ```
-### 2.3 Agent contact authentication message record
+### 2.3 Contact authentication message record
 
-Time-series JSON agent authentication message record, with (bogus) example data.    
+Time-series JSON agent contact authentication message record, with (bogus) example data.    
 ```
 "contact-authn-msg": {                                                   
-    "contact":"4e8f2603-4591-4392-952f-bfbe86bd06eb"                               // agent v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string
+    "contact":"4e8f2603-4591-4392-952f-bfbe86bd06eb"                             // contact v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string
     "agent":"d303aea7-3604-46c5-84c9-ad2758fb2852"                               // agent v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string
     "token":"216f00f4be13890449c1852cffd7a8bd9557258eacda56e0b4e8166b943405cc"   // token SHA-256 hash code, as string 
     "session":"e696ebe85bb17ac62ac40e58a07224bb65654935617349ddf538fd5ac176512e" // session SHA-256 hash-code, as string
@@ -123,7 +123,7 @@ JSON agent authorization dataset, with (bogus) data examples.
     "type":"user-app"                                                            // Authorization type, "profile-app", "health-app","research-app", "test-lab", "test-site", "self-test-appliance", "nho", "gho", "source", as string
 }
 ```
-### 2.4 Agent contact authorization record 
+### 2.4 Contact authorization record 
 JSON contact authorization dataset, with (bogus) example data.
 ```
 "contact-authr": {
