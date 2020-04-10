@@ -28,8 +28,7 @@ This API end-point specification defines app session and token-based authenticat
 This API specification defines app and app contact authorization record types. 
 
 
-## 2. Covid19Clue API JSON data type definitions
-
+## 2. Covid19Clue API JSON-like message record definitions
 
 ### 2.1 Profile message record
 
