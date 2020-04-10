@@ -90,7 +90,8 @@ Time-series JSON agent authentication message dataset, with (bogus) example data
 ```
 "agent-authn": {                                                   
     "authn-agent":"d303aea7-3604-46c5-84c9-ad2758fb2852"                               // agent v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string                                              
-    "authn-token":"216f00f4be13890449c1852cffd7a8bd9557258eacda56e0b4e8166b943405cc"   // SHA-256 hash code, as string 
+    "authn-token":"216f00f4be13890449c1852cffd7a8bd9557258eacda56e0b4e8166b943405cc"   // token SHA-256 hash code, as string 
+    "authn-session":"e696ebe85bb17ac62ac40e58a07224bb65654935617349ddf538fd5ac176512e" // session SHA-256 hash-code, as string
     "authn-timestamp:"1586485642"                                                      // Authentication GMT time, unix UTC-timestamp, as string 
     "authn-tz":"+0100"                                                                 // Authentication timezone, string concatenation of "+" or "-" with "hhmm" time format, excluding daylight saving time, as string 
     "authn-timeout":"3600"                                                             // Authentication timeout, in seconds, as string    
@@ -105,7 +106,7 @@ JSON agent authorization dataset, with (bogus) data examples.
     "timestamp:"1586485642"                                                      // Authorization GMT time, unix UTC-timestamp, as string 
     "tz":"+0100"                                                                 // Authorization time zone, string concatenation of "+" or "-" with "hhmm" time format, excluding daylight saving time, as string 
     "authorization":"0"                                                          // valid authorization, default = "0" = false, "1" = true
-    "type":"user-app"                                                            // Authorization type, "profile-app", "health-app", "test-lab", "test-site", "self-test-appliance", "nho", "gho", "source" as string
+    "type":"user-app"                                                            // Authorization type, "profile-app", "health-app", "test-lab", "test-site","epi-research","self-test-appliance", "nho", "gho", "source" as string
     "agent-admin":"contact-authr"                                                // Authorized Agent admin contact, as "contact-authr"
 }
 ```
@@ -130,7 +131,6 @@ JSON contact authorization dataset, with (bogus) example data.
      "agent-org-region":"BE"                                                                       // region or county code, as string 
      "agent-org-country":"Switzerland"                                                             // Country, as string 
 }
-
 ``` 
 ## API function calls
 ```
