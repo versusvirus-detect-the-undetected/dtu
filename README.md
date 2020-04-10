@@ -34,9 +34,9 @@ This API verifies and/or creates trusted geolocations from user self-diagnostic 
 
 Time-series JSON diagnostic message dataset.  
 ```
-"user-diag": {
-    "user":"369e1fac-820b-4695-98a4-e22901584e0c"                      // v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string
-    "agent":"d303aea7-3604-46c5-84c9-ad2758fb2852"                     // v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string
+"diag": {
+    "diag-profile":"369e1fac-820b-4695-98a4-e22901584e0c"              // pseudonymous diagnostic profile v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string
+    "agent":"d303aea7-3604-46c5-84c9-ad2758fb2852"                     // agent v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string
     "user-tx-timestamp":"1586483743"                                   // user transmission GMT time, unix UTC-timestamp, as string
     "user-tx_tz":"+0100"                                               // user timezone, string concatenation of "+" or "-" with "hhmm" time format, excluding daylight saving time, as string 
     "agent-tx-timestamp":"1586485743"                                  // agent transmission GMT time, unix UTC-timestamp, as string
@@ -76,7 +76,7 @@ Time-series JSON diagnostic message dataset.
 Time-series JSON agent authentication message dataset.  
 ```
 "agent-authn": {                                                   
-    "authn-agent":"d303aea7-3604-46c5-84c9-ad2758fb2852"                               // v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string                                              
+    "authn-agent":"d303aea7-3604-46c5-84c9-ad2758fb2852"                               // agent v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string                                              
     "authn-token":"216f00f4be13890449c1852cffd7a8bd9557258eacda56e0b4e8166b943405cc"   // SHA-256 hash code, as string 
     "authn-timestamp:"1586485642"                                                      // Authentication GMT time, unix UTC-timestamp, as string 
     "authn-tz":"+0100"                                                                 // Authentication timezone, string concatenation of "+" or "-" with "hhmm" time format, excluding daylight saving time, as string 
@@ -88,7 +88,7 @@ Time-series JSON agent authentication message dataset.
 JSON agent authorization dataset.  
 ```
 "agent-authr": {
-    "agent":"d303aea7-3604-46c5-84c9-ad2758fb2852"                               // v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string
+    "agent":"d303aea7-3604-46c5-84c9-ad2758fb2852"                               // agent v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string
     "timestamp:"1586485642"                                                      // Authorization GMT time, unix UTC-timestamp, as string 
     "tz":"+0100"                                                                 // Authorization time zone, string concatenation of "+" or "-" with "hhmm" time format, excluding daylight saving time, as string 
     "authorization":"0"                                                          // valid authorization, default = "0" = false, "1" = true
@@ -100,8 +100,8 @@ JSON agent authorization dataset.
 JSON contact authorization dataset. 
 ```
 "contact-authr": {
-    "contact": "4e8f2603-4591-4392-952f-bfbe86bd06eb"                                              // v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string
-     "agent":"d303aea7-3604-46c5-84c9-ad2758fb2852"                                                // v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string    
+    "contact": "4e8f2603-4591-4392-952f-bfbe86bd06eb"                                              // agent contact v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string
+     "agent":"d303aea7-3604-46c5-84c9-ad2758fb2852"                                                // agent v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string    
      "agent-name":"Covidtracker"                                                                   // agent name, as string 
      "agent-url":"https://covidtracker.ch"                                                         // valid url, as string 
      "agent-org-fqdn": "covidtracker.ch"                                                           // valid org domain, as string 
