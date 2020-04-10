@@ -28,7 +28,7 @@ App/Session token-based authentication (tbd)
 
 This API verifies and/or creates trusted geolocations from user self-diagnostic time-series data from 3rd-party apps.
 
-## 2. Covid19Clue API JSON data type definition
+## 2. Covid19Clue API JSON data type definitions
 
 ### 2.1 user-diag
 
@@ -91,7 +91,7 @@ JSON agent authorization dataset.
     "timestamp:"1586485642"                                                      // Authorization GMT time, unix UTC-timestamp, as string 
     "tz":"+0100"                                                                 // Authorization time zone, string concatenation of "+" or "-" with "hhmm" time format, excluding daylight saving time, as string 
     "authorization":"0"                                                          // valid authorization, default = "0" = false, "1" = true
-    "type":"userapp"                                                             // Authorization type, "user-app", "health-app", "test-lab", "test-site", "self-test-appliance","NHO","WHO", as string
+    "type":"user-app"                                                            // Authorization type, "user-app", "health-app", "test-lab", "test-site", "self-test-appliance", "nho", "gho", "source" as string
     "agent-admin":"contact-authr"                                                // Authorized Agent admin contact, as "contact-authr"
 }
 ```
