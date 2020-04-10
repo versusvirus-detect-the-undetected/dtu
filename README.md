@@ -1,17 +1,18 @@
-# Covid19Clue messaging API specification v0.1 - DTU (detect the undetected)
+# Covid19Clue API specification v0.1 - DTU (detect the undetected)
 
-A messaging application programming interface (API) specification for covid19 diagnostic data. Enables to re-connect all kinds of third-party apps safely to exchange real-time diagnostic data as messages. Moreover, this messaging API specification defines also the messages allowing to officially authorize and authenticate a wide range of re-connected covid19 apps as trusted apps. This can  be achieved by national and international official public health organizations such as e.g. the Swiss Federal Public Health Office or the World Health Organization.
+A messaging application programming interface (API) specification for covid19 diagnostic data. Enables to re-connect all kinds of third-party covid19 apps safely to exchange diagnostic data profiles as messages. Moreover, this messaging API specification defines also the messages allowing to officially authorize and authenticate a wide range of re-connected covid19 apps as trusted apps. This can  be achieved by national and international official public health organizations such as e.g. the Swiss Federal Public Health Office or the World Health Organization.
 
 ## 1 API usage scenarios description
 
 ### 1.1 Covid19Clue API for mobile 3rd-party apps (API end-point scenario)
+
 Re-connect 3rd-party mobile apps to government, doctors, brand them "official".
 Provide user symptoms and geo data for predictions for all 3rd-party dashboard apps, epidemiologic dashboards
 Consent-based self-diagnostics collection and official geolocator data API service for 3rd-party apps.
 
-### 1.2 Covid19Clue API for officials (BAG, doctors) (API end-point scenario)
-This API reconnects 3rd-party big-data apps for epidemiologics & prediction in governments as well as 3rd party health care apps for physicians' patient management to get infection data in near-real time. It also helps doctors to speed up work dispenses in case of positive test results, and respective quarantining
+### 1.2 Covid19Clue API for health offices, hospitals and physicians (API end-point scenario)
 
+This API reconnects 3rd-party big-data apps for epidemiologics & prediction in governments as well as 3rd party health care apps for physicians' patient management to get infection data and patient profiles in near-real time. It e.g. helps physicians to speed up writing and revoking work dispenses in case of positive test results and/or ordered quarantine, hospitalization, etc.
 
 ### 1.3 Covid19Clue API for test labs, home appliances (API end-point scenario)
 
@@ -20,11 +21,11 @@ Re-connect 3rd- party mobile apps to government, doctors, brand them "official")
 
 ### 1.4 Covid19Clue API authentication (API end-point scenario) 
 
-App/Session token-based authentication (tbd) 
+App session token-based authentication. 
 
 ### 1.5 Covid19Clue API authorization (API end-point scenario)
 
-This API verifies and/or creates trusted geolocations from user self-diagnostic time-series data from 3rd-party apps.
+App and App contact authorization 
 
 ## 2. Covid19Clue API JSON data type definitions
 
