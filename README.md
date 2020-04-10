@@ -56,8 +56,8 @@ Main dataset definition for messaging system time series. All personal diag data
 ### 2.2 authorize-data
 ```
 "auth-data": {
-    "auth-token":"216f00f4be13890449c1852cffd7a8bd9557258eacda56e0b4e8166b943405cc"   // string, SHA-256 hash code                                                    
-    "authorize-agent":"d303aea7-3604-46c5-84c9-ad2758fb2852"                          // v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4                                              
+    "auth-token":"216f00f4be13890449c1852cffd7a8bd9557258eacda56e0b4e8166b943405cc"   // SHA-256 hash code, as string                                                    
+    "authorize-agent":"d303aea7-3604-46c5-84c9-ad2758fb2852"                          // v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string                                              
     "auth-timeout":"3600"                                                             // seconds, as string    
     }
 }
