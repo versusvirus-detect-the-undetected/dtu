@@ -4,26 +4,25 @@ A messaging application programming interface (API) specification for covid19 di
 
 ## 1 API usage scenarios description
 
-### 1.1 Covid19Clue API for mobile 3rd-party apps (API end-point scenario)
+### 1.1 Covid19Clue API end-point scenario for mobile 3rd-party apps 
 
-Re-connect 3rd-party mobile apps to government apps, health-apps, as trusted apps. Provide pseudonymous user diagnosis profiles for predictions for all 3rd-party public health dashboard apps, epidemiologic dashboards messaging API service.
+Re-connect 3rd-party mobile apps via this endpoint. Provide pseudonymous user diagnosis profile message records for predictions for all 3rd-party public health dashboard apps, epidemiologic dashboards via a messaging API service.
 
-### 1.2 Covid19Clue API for health offices, hospitals and physicians (API end-point scenario)
+### 1.2 Covid19Clue API end-point scenario description for health offices, hospitals and physicians 
 
-This API reconnects 3rd-party big-data apps for epidemiologics & prediction in governments as well as 3rd party health care apps for physicians' patient management to get infection data and patient profiles in near-real time. It e.g. helps physicians to speed up writing and revoking work dispenses in case of positive test results and/or ordered quarantine, hospitalization, etc.
+This API end-point reconnects 3rd-party big-data apps for epidemiologics & prediction in governments as well as 3rd party health care apps for physicians' patient management to get infection data and patient profiles in near-real time. It e.g. helps physicians to speed up writing and revoking work dispenses in case of positive test results and/or ordered quarantine, hospitalization, etc.
 
-### 1.3 Covid19Clue API for test labs, home appliances (API end-point scenario)
+### 1.3 Covid19Clue API  end-point scenario description for test labs, home appliances 
 
-This API connects Test Lab computers and appliances, as well as home testing Internet-of-Things appliances in the future.
-Re-connect 3rd- party mobile apps to government, doctors, brand them "official")
+This API end-point scenario connects to Test Lab computers and appliances, as well as home testing appliances IoT (Internet-of-Things) in a machine-to-machine future.
 
-### 1.4 Covid19Clue API authentication (API end-point scenario) 
+### 1.4 Covid19Clue API  end-point scenario description for authentication 
 
-App session token-based authentication. 
+This API end-point specification defines app session and token-based authentication message record types. 
 
-### 1.5 Covid19Clue API authorization (API end-point scenario)
+### 1.5 Covid19Clue API  end-point scenario for authorization 
 
-App and app contact authorization. 
+This API specification defines app and app contact authorization record types. 
 
 ## 2. Covid19Clue API JSON data type definitions
 
