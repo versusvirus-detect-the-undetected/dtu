@@ -32,7 +32,7 @@ This API verifies and/or creates trusted geolocations from user self-diagnostic 
 
 ### 2.1 diag-data
 
-Main dataset definition for messaging system time series. All personal diag data is optional, UUID for user, agent is mandatory.  
+Time-series dataset definition for messaging system. All personal diag data is optional, UUID for user, agent is mandatory.  
 ```
 "diag-data": {
     "user":"369e1fac-820b-4695-98a4-e22901584e0c"                      // v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string
@@ -44,15 +44,27 @@ Main dataset definition for messaging system time series. All personal diag data
     "gps-lat:"46.9465"                                                 // GPS latitude, float value as string
     "gps-long":"7.4443"                                                // GPS longitude, float value as string
     "gps-prec":"50"                                                    // GPS precision in meters, integer as string                  
-    "self-diag-has_fever": "1"                                         // boolean, as string
-    "self-diag-temp-scale":"C"                                         // "C" = Celsius, "F" = Fahrenheit, as string  
-    "self-diag-fever-temp":"38.9"                                      // float, as string 
-    "self-diag-has-dry-cough":"0"                                      // boolean value, as string 
-    "self-diag-has-taste-loss":"0"                                     // boolean value, as string 
-    "vrfd-diag-has-test-positive:"0"                                   // boolean value, as string       
-    "vrfd-test-positive-by":"6620a86f-e87c-4566-9a45-b8ea32a2885d"     // testing agent's UUID, v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string
-    "vrfd-has-test-immunized:"0"                                       // boolean value, as string  
-    "vrfd-test-positive-by":"8dbee094-90d7-4faa-9e5f-fdad0ed4a7a3"     // string, testing agent-UUID, v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4
+    "self-diag-has_fever": "1"                                         // symptom, fever, boolean, as string
+    "self-diag-body-temp-scale":"C"                                    // temperature scale, "C" = Celsius, "F" = Fahrenheit, as string
+    "self-diag-oxy-level: "96"                                         // symptom, oxygen level percentage, integer, as string
+    "self-diag-body-temp":"38.9"                                       // body temperature, float, as string 
+    "self-diag-has-dry-cough":"0"                                      // symptom, dry cough, boolean value, as string
+    "self-diag-has-freq-sneezing":"0"                                  // symptom, frequent sneezing, boolean value, as string
+    "self-diag-has-short-breath:"1"                                    // symptom, short breath, boolean value, as string 
+    "self-diag-has-breath-difficult:"0"                                // symptom, difficulty breathing, boolean value, as string 
+    "self-diag-has-taste-loss":"0"                                     // symptom, taste loss, boolean value, as string
+    "self-diag-has-diarrhea":"0"                                       // symptom, diarrhea, boolean value, as string
+    "self-diag-has-constipation:"0"                                    // symptom, constipation, boolean value, as string
+    "self-diag-has-stool_color-change:"1"                              // symptom, stool color change, boolean value, as string
+    "self-diag-has-urine-color-change:"0"                              // symptom, urine color change, boolean value, as string 
+    "self-diag-has-migraine-like-ache:"1"                              // symptom, migraine-like headache, boolean value, as string 
+    "self-diag-has-bodyskin-rash":"1"                                  // symptom, sudden body skin rash, boolean value, as string
+    "self-diag-has-pruritus":"1"                                       // symptom, pruritus (itching), boolean value, as string
+    "self-diag-has-tachycardy:"1"                                      // symptom, tachycardy at rest, boolean value, as string
+    "vrfd-diag-virustest-result:"0"                                    // verfied virus test result, "0" = negative, "1" = positive, boolean value, as string       
+    "vrfd-test-by":"6620a86f-e87c-4566-9a45-b8ea32a2885d"     // testing agent's UUID, v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string
+    "vrfd-immunetest-result:"0"                                        // verfied immune test result, "0" = negative, "1" = positive, boolean value, as string       
+    "vrfd-test-by":"8dbee094-90d7-4faa-9e5f-fdad0ed4a7a3"     // string, testing agent-UUID, v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4
 }
 ```
 ### 2.2 auth-data
