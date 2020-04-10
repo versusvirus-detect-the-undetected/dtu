@@ -105,7 +105,7 @@ JSON agent authorization dataset, with (bogus) data examples.
     "timestamp:"1586485642"                                                      // Authorization GMT time, unix UTC-timestamp, as string 
     "tz":"+0100"                                                                 // Authorization time zone, string concatenation of "+" or "-" with "hhmm" time format, excluding daylight saving time, as string 
     "authorization":"0"                                                          // valid authorization, default = "0" = false, "1" = true
-    "type":"user-app"                                                            // Authorization type, "user-app", "health-app", "test-lab", "test-site", "self-test-appliance", "nho", "gho", "source" as string
+    "type":"user-app"                                                            // Authorization type, "profile-app", "health-app", "test-lab", "test-site", "self-test-appliance", "nho", "gho", "source" as string
     "agent-admin":"contact-authr"                                                // Authorized Agent admin contact, as "contact-authr"
 }
 ```
@@ -119,7 +119,7 @@ JSON contact authorization dataset, with (bogus) example data.
      "agent-url":"https://covidtracker.ch"                                                         // valid url, as string 
      "agent-org-fqdn": "covidtracker.ch"                                                           // valid org domain, as string 
      "agent-org-name": "Canton of Bern"                                                            // organization name, as string 
-     "agent-org-spoc-usermail": "mailto:adminuser-at-covidtracker.ch"                              // valid uri, as string
+     "agent-org-spoc-usermail": "mailto:admin-at-covidtracker.ch"                                  // valid mail uri, as string
      "agent-org-spoc-password: "2207f568da6b4d1ba8a9cdebb18d5c79847a4fb23a41b27489a3c6d84aeab215"  // sha-256 salted password hash, as string  
      "agent-org-spoc-tel-intl":"41123456789"                                                       // valid international phone number, as string
      "agent-org-spoc-tel-ext:"12345"                                                               // internal extension, as string     
