@@ -25,13 +25,14 @@ App session token-based authentication.
 
 ### 1.5 Covid19Clue API authorization (API end-point scenario)
 
-App and App contact authorization 
+App and app contact authorization. 
 
 ## 2. Covid19Clue API JSON data type definitions
 
+
 ### 2.1 Profile message record
 
-Time-series JSON diagnostic profile message record, with (bogus) example data.  
+Time-series JSON-like diagnostic profile message record, with (bogus) example data.  
 ```
 "profile-msg": {
     "profile":"369e1fac-820b-4695-98a4-e22901584e0c"                   // pseudonymous diagnostic profile v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string
@@ -85,7 +86,7 @@ Time-series JSON diagnostic profile message record, with (bogus) example data.
 ```
 ### 2.2 Agent authentication message record
 
-Time-series JSON agent authentication message record, with (bogus) example data.    
+Time-series JSON-like agent authentication message record, with (bogus) example data.    
 ```
 "agent-authn-msg": {                                                   
     "agent":"d303aea7-3604-46c5-84c9-ad2758fb2852"                               // agent v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string                                              
@@ -98,7 +99,7 @@ Time-series JSON agent authentication message record, with (bogus) example data.
 ```
 ### 2.3 Contact authentication message record
 
-Time-series JSON agent contact authentication message record, with (bogus) example data.    
+Time-series JSON-like agent contact authentication message record, with (bogus) example data.    
 ```
 "contact-authn-msg": {                                                   
     "contact":"4e8f2603-4591-4392-952f-bfbe86bd06eb"                             // contact v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string
@@ -112,7 +113,7 @@ Time-series JSON agent contact authentication message record, with (bogus) examp
 ```
 ### 2.3 Agent authorization record
 
-JSON agent authorization dataset, with (bogus) data examples.    
+JSON-like agent authorization dataset, with (bogus) data examples.    
 ```
 "agent-authr": {
     "agent":"d303aea7-3604-46c5-84c9-ad2758fb2852"                               // agent v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string
@@ -123,7 +124,7 @@ JSON agent authorization dataset, with (bogus) data examples.
 }
 ```
 ### 2.4 Contact authorization record 
-JSON contact authorization dataset, with (bogus) example data.
+JSON-like contact authorization dataset, with (bogus) example data.
 ```
 "contact-authr": {
     "contact": "4e8f2603-4591-4392-952f-bfbe86bd06eb"                                              // agent contact, v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string
