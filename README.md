@@ -63,11 +63,11 @@ Time-series dataset definition for messaging system. All data is optional, excep
     "self-diag-has-migraine-like-ache:"1"                              // symptom, migraine-like headache, boolean value, as string 
     "self-diag-has-bodyskin-rash":"1"                                  // symptom, sudden body skin rash, boolean value, as string
     "self-diag-has-pruritus":"1"                                       // symptom, pruritus (itching), boolean value, as string
-    "self-diag-has-tachycardy:"1"                                      // symptom, tachycardy at rest, boolean value, as string
-    "self-diag-has-cardial-arrhythmy:"0"                               // symptom, cardial arrhythmy, boolean value, as string 
-    "vrfd-diag-has-virustest:"0"                                       // tested for virus, default = "0" = No, "1" = "Yes"   
-    "vrfd-diag-virustest-result:"0"                                    // verfied virus test result, default = "0" = negative, "1" = positive, boolean value, as string       
-    "vrfd-diag-immunetest-result:"0"                                   // verfied immune test result, default = "0" = negative, "1" = positive, boolean value, as string       
+    "self-diag-has-tachycardy:"1"                                      // symptom, tachycardy at rest, boolean value, default = "0", as string
+    "self-diag-has-cardial-arrhythmy:"0"                               // symptom, cardial arrhythmy, boolean value, default = "0", as string 
+    "vrfd-diag-has-virustest:"0"                                       // tested for virus, boolean value, default = "0", as string 
+    "vrfd-diag-virustest-result:"0"                                    // verfied virus test result, boolean value, default = "0", as string       
+    "vrfd-diag-immunetest-result:"0"                                   // verfied immune test result, boolean value default = "0", as string       
 }
 ```
 ### 2.2 agent-authn
