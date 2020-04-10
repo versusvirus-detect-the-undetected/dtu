@@ -47,7 +47,7 @@ Time-series dataset definition for messaging system. All personal diag data is o
     "self-diag-has_fever": "1"                                         // symptom, fever, boolean, as string
     "self-diag-body-temp-scale":"C"                                    // temperature scale, "C" = Celsius, "F" = Fahrenheit, as string
     "self-diag-body-temp":"38.9"                                       // body temperature, float, as string 
-    "self-diag-oxy-level: "96"                                         // symptom, oxygen level percentage, integer, as string
+    "self-diag-oxy-level: "96"                                         // oxygen level percentage, integer, as string
     "self-diag-has-dry-cough":"0"                                      // symptom, dry cough, boolean value, as string
     "self-diag-has-freq-sneezing":"0"                                  // symptom, frequent sneezing, boolean value, as string
     "self-diag-has-short-breath:"1"                                    // symptom, short breath, boolean value, as string 
@@ -61,6 +61,7 @@ Time-series dataset definition for messaging system. All personal diag data is o
     "self-diag-has-bodyskin-rash":"1"                                  // symptom, sudden body skin rash, boolean value, as string
     "self-diag-has-pruritus":"1"                                       // symptom, pruritus (itching), boolean value, as string
     "self-diag-has-tachycardy:"1"                                      // symptom, tachycardy at rest, boolean value, as string
+    "self-diag-has-cardial-arrhythmy:"0"                               // symptom, cardial arrhythmy, boolean value, as string 
     "vrfd-diag-virustest-result:"0"                                    // verfied virus test result, "0" = negative, "1" = positive, boolean value, as string       
     "vrfd-test-by":"6620a86f-e87c-4566-9a45-b8ea32a2885d"     // testing agent's UUID, v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string
     "vrfd-immunetest-result:"0"                                        // verfied immune test result, "0" = negative, "1" = positive, boolean value, as string       
