@@ -33,14 +33,14 @@ This API verifies and/or creates trusted geolocations from user self-diagnostic 
 ### 2.1 Profile message record
 
 Time-series JSON diagnostic profile message record, with (bogus) example data.  
-```
+```json
 "profile-msg": {
     "profile":"369e1fac-820b-4695-98a4-e22901584e0c"                   // pseudonymous diagnostic profile v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string
     "agent":"d303aea7-3604-46c5-84c9-ad2758fb2852"                     // agent v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string
     "user-tx-timestamp":"1586483743"                                   // user transmission GMT time, unix UTC-timestamp, as string
     "user-tx_tz":"+0100"                                               // user timezone, string concatenation of "+" or "-" with "hhmm" time format, excluding daylight saving time, as string 
     "agent-tx-timestamp":"1586485743"                                  // agent transmission GMT time, unix UTC-timestamp, as string
-    "agent-tx_tz":"+0100"                                              // agent timezone, string concatenation of "+" or "-" with "hhmm" time format, excluding daylight saving time, as string
+    "agent-tx-tz":"+0100"                                              // agent timezone, string concatenation of "+" or "-" with "hhmm" time format, excluding daylight saving time, as string
     "agent-gps-lat:"46.9465"                                           // GPS latitude, float value as string
     "agent-gps-long":"7.4443"                                          // GPS longitude, float value as string
     "agent-gps-prec":"50"                                              // GPS precision in meters, integer as string
@@ -143,6 +143,8 @@ JSON contact authorization dataset, with (bogus) example data.
      "agent-org-zip: "3000"                                                                        // Postal code, as string     
      "agent-org-region":"BE"                                                                       // region or county code, as string 
      "agent-org-country":"Switzerland"                                                             // Country, as string 
+"timestamp:"1586485642"                                                      // Authorization GMT time, unix UTC-timestamp, as string 
+    "tz":"+0100"                                                                 // Authorization time zone, string concatenation of "+" or "-" with "hhmm" time format, excluding daylight saving time, as string 
 }
 ``` 
 ## API function calls
