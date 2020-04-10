@@ -40,7 +40,7 @@ Time-series JSON diagnostic message dataset, with (bogus) example data.
     "user-tx-timestamp":"1586483743"                                   // user transmission GMT time, unix UTC-timestamp, as string
     "user-tx_tz":"+0100"                                               // user timezone, string concatenation of "+" or "-" with "hhmm" time format, excluding daylight saving time, as string 
     "agent-tx-timestamp":"1586485743"                                  // agent transmission GMT time, unix UTC-timestamp, as string
-    "agent-tx_tz":"+0100"                                              // agent timezone, string concatenation of "+" or "-" with "hhmm" time format, excluding daylight saving time, as string  
+    "agent-tx_tz":"+0100"                                              // agent timezone, string concatenation of "+" or "-" with "hhmm" time format, excluding daylight saving time, as string                                      
     "age":"55"                                                         // age, int as string
     "sex":"m"                                                          // sex, string, "f" = female, "m" = male 
     "gps-lat:"46.9465"                                                 // GPS latitude, float value as string
@@ -63,12 +63,23 @@ Time-series JSON diagnostic message dataset, with (bogus) example data.
     "self-diag-has-urine-color-change:"0"                              // symptom, urine color change, boolean value, as string 
     "self-diag-has-migraine-like-ache:"1"                              // symptom, migraine-like headache, boolean value, as string 
     "self-diag-has-bodyskin-rash":"1"                                  // symptom, sudden body skin rash, boolean value, as string
-    "self-diag-has-pruritus":"1"                                       // symptom, pruritus (itching), boolean value, as string
+    "self-diag-has-pruritus":"1"                                       // symptom, pruritus (itching), boolean value, default = 0, as string
     "self-diag-has-tachycardy:"1"                                      // symptom, tachycardy at rest, boolean value, default = "0", as string
     "self-diag-has-cardial-arrhythmy:"0"                               // symptom, cardial arrhythmy, boolean value, default = "0", as string 
-    "vrfd-diag-has-virustest:"0"                                       // tested for virus, boolean value, default = "0", as string 
-    "vrfd-diag-virustest-result:"0"                                    // verfied virus test result, boolean value, default = "0", as string       
-    "vrfd-diag-immunetest-result:"0"                                   // verfied immune test result, boolean value default = "0", as string       
+    "vrfd-diag-has-virustest:"0"                                       // verified tested for virus, boolean value, default = "0", as string 
+    "vrfd-diag-virustest-result:"0"                                    // verified virus test result, boolean value, default = "0", as string       
+    "vrfd-diag-immunetest-result:"0"                                   // verified immune test result, boolean value default = "0", as string       
+    "diag-stage":"1"                                                   // "0" = undiagnosed,
+                                                                       // "1" = self-diagnosed,       
+                                                                       // "2" = verified-diagnosed,   
+                                                                       // integer, as string
+
+    "quarantine-status":"1"                                            // "0" = shelter-at-home-commuting,
+                                                                       // "1" = shelter-at-home-permanent,  
+                                                                       // "2" = ordered-at-home,       
+                                                                       // "3" = hospitalized,   
+                                                                       // "4" = immunized-released,
+                                                                       // integer, as string
 }
 ```
 ### 2.2 agent-authn
