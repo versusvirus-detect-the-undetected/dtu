@@ -32,7 +32,7 @@ This API verifies and/or creates trusted geolocations from user self-diagnostic 
 
 Main dataset definition for messaging system time series. All personal diag data is optional, UUID for user, agent is mandatory.  
 ```
-diag-data {
+"diag-data": {
     "user":"369e1fac-820b-4695-98a4-e22901584e0c"                      // string 4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4
     "agent":"d303aea7-3604-46c5-84c9-ad2758fb2852"                     // string 4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4
     "tx-timestamp":"                                                   // UTC-timestamp
@@ -54,16 +54,14 @@ diag-data {
 ```
 ### 2.2 auth-data
 ```
-auth-data {
-    "auth-token":
-    "auth-token-type": value as stringauth-token-user-type: string (options: user, agent)
-    auth-agent { 
-        agent UUID - hashed value as string
+"auth-data": {
+    "auth-token":" "                                                   //  
+    "auth-agent":" "                                                   // agent UUID - hashed value as string
     }
 }
 ```
 ### 2.3 alert-data 
-
+```
 alert-data {
     to_user: GUID as string
     alert_message: string
