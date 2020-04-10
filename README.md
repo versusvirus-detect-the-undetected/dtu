@@ -30,11 +30,11 @@ This API verifies and/or creates trusted geolocations from user self-diagnostic 
 
 ## 2. Covid19Clue API JSON data type definitions
 
-### 2.1 user-diag
+### 2.1 Profile message record
 
-Time-series JSON diagnostic message dataset, with (bogus) example data.  
+Time-series JSON diagnostic profile message record, with (bogus) example data.  
 ```
-"diag": {
+"profile-msg": {
     "profile":"369e1fac-820b-4695-98a4-e22901584e0c"                   // pseudonymous diagnostic profile v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string
     "agent":"d303aea7-3604-46c5-84c9-ad2758fb2852"                     // agent v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string
     "user-tx-timestamp":"1586483743"                                   // user transmission GMT time, unix UTC-timestamp, as string
@@ -84,20 +84,34 @@ Time-series JSON diagnostic message dataset, with (bogus) example data.
                                                                        // integer, as string
 }
 ```
-### 2.2 agent-authn
+### 2.2 Agent authentication message record
 
-Time-series JSON agent authentication message dataset, with (bogus) example data.    
+Time-series JSON agent authentication message record, with (bogus) example data.    
 ```
-"agent-authn": {                                                   
-    "authn-agent":"d303aea7-3604-46c5-84c9-ad2758fb2852"                               // agent v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string                                              
-    "authn-token":"216f00f4be13890449c1852cffd7a8bd9557258eacda56e0b4e8166b943405cc"   // token SHA-256 hash code, as string 
-    "authn-session":"e696ebe85bb17ac62ac40e58a07224bb65654935617349ddf538fd5ac176512e" // session SHA-256 hash-code, as string
-    "authn-timestamp:"1586485642"                                                      // Authentication GMT time, unix UTC-timestamp, as string 
-    "authn-tz":"+0100"                                                                 // Authentication timezone, string concatenation of "+" or "-" with "hhmm" time format, excluding daylight saving time, as string 
-    "authn-timeout":"3600"                                                             // Authentication timeout, in seconds, as string    
+"agent-authn-msg": {                                                   
+    "agent":"d303aea7-3604-46c5-84c9-ad2758fb2852"                               // agent v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string                                              
+    "token":"216f00f4be13890449c1852cffd7a8bd9557258eacda56e0b4e8166b943405cc"   // token SHA-256 hash code, as string 
+    "session":"e696ebe85bb17ac62ac40e58a07224bb65654935617349ddf538fd5ac176512e" // session SHA-256 hash-code, as string
+    "timestamp:"1586485642"                                                      // Authentication GMT time, unix UTC-timestamp, as string 
+    "tz":"+0100"                                                                 // Authentication timezone, string concatenation of "+" or "-" with "hhmm" time format, excluding daylight saving time, as string 
+    "session-timeout":"3600"                                                     // Authentication timeout, in seconds, as string    
 }
 ```
-### 2.3 agent-authr
+### 2.3 Agent contact authentication message record
+
+Time-series JSON agent authentication message record, with (bogus) example data.    
+```
+"contact-authn-msg": {                                                   
+    "contact":"4e8f2603-4591-4392-952f-bfbe86bd06eb"                               // agent v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string
+    "agent":"d303aea7-3604-46c5-84c9-ad2758fb2852"                               // agent v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string
+    "token":"216f00f4be13890449c1852cffd7a8bd9557258eacda56e0b4e8166b943405cc"   // token SHA-256 hash code, as string 
+    "session":"e696ebe85bb17ac62ac40e58a07224bb65654935617349ddf538fd5ac176512e" // session SHA-256 hash-code, as string
+    "timestamp:"1586485642"                                                      // Authentication GMT time, unix UTC-timestamp, as string 
+    "tz":"+0100"                                                                 // Authentication timezone, string concatenation of "+" or "-" with "hhmm" time format, excluding daylight saving time, as string 
+    "session-timeout":"3600"                                                     // Authentication timeout, in seconds, as string    
+}
+```
+### 2.3 Agent authorization record
 
 JSON agent authorization dataset, with (bogus) data examples.    
 ```
@@ -106,16 +120,15 @@ JSON agent authorization dataset, with (bogus) data examples.
     "timestamp:"1586485642"                                                      // Authorization GMT time, unix UTC-timestamp, as string 
     "tz":"+0100"                                                                 // Authorization time zone, string concatenation of "+" or "-" with "hhmm" time format, excluding daylight saving time, as string 
     "authorization":"0"                                                          // valid authorization, default = "0" = false, "1" = true
-    "type":"user-app"                                                            // Authorization type, "profile-app", "health-app", "test-lab", "test-site","epi-research","self-test-appliance", "nho", "gho", "source" as string
-    "agent-admin":"contact-authr"                                                // Authorized Agent admin contact, as "contact-authr"
+    "type":"user-app"                                                            // Authorization type, "profile-app", "health-app","research-app", "test-lab", "test-site", "self-test-appliance", "nho", "gho", "source", as string
 }
 ```
-### 2.4 contact-authr  
+### 2.4 Agent contact authorization record 
 JSON contact authorization dataset, with (bogus) example data.
 ```
 "contact-authr": {
-    "contact": "4e8f2603-4591-4392-952f-bfbe86bd06eb"                                              // agent contact v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string
-     "agent":"d303aea7-3604-46c5-84c9-ad2758fb2852"                                                // agent v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string    
+    "contact": "4e8f2603-4591-4392-952f-bfbe86bd06eb"                                              // agent contact, v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string
+     "agent":"d303aea7-3604-46c5-84c9-ad2758fb2852"                                                // agent, v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string    
      "agent-name":"Covidtracker"                                                                   // agent name, as string 
      "agent-url":"https://covidtracker.ch"                                                         // valid url, as string 
      "agent-org-fqdn": "covidtracker.ch"                                                           // valid org domain, as string 
