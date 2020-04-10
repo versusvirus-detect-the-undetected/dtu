@@ -33,23 +33,24 @@ This API verifies and/or creates trusted geolocations from user self-diagnostic 
 Main dataset definition for messaging system time series. All personal diag data is optional, UUID for user, agent is mandatory.  
 ```
 "diag-data": {
-    "user":"369e1fac-820b-4695-98a4-e22901584e0c"                      // string 4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4
-    "agent":"d303aea7-3604-46c5-84c9-ad2758fb2852"                     // string 4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4
-    "tx-timestamp":"                                                   // UTC-timestamp
-    "age":"55"                                                         // int as string
-    "sex":"m"                                                          // string, "f" = female, "m" = male, 
-    "gps-lat:"46.9465"                                                 // float value as string
-    "gps-long":"7.4443"                                                // float value as string
-    "gps-prec":"50"                                                    // integer as string, in meters                  
-    "self-diag-has_fever": "1"                                         // boolean as string
+    "user":"369e1fac-820b-4695-98a4-e22901584e0c"                      // string, v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4
+    "agent":"d303aea7-3604-46c5-84c9-ad2758fb2852"                     // string  v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4
+    "tx-timestamp":"                                                   // transmission time, unix UTC-timestamp, as string
+    "tx-tz":"UTC+2"                                                    // transmission timezone, as string 
+    "age":"55"                                                         // age, int as string
+    "sex":"m"                                                          // sex, string, "f" = female, "m" = male, 
+    "gps-lat:"46.9465"                                                 // GPS latitude, float value as string
+    "gps-long":"7.4443"                                                // GPS longitude, float value as string
+    "gps-prec":"50"                                                    // GPS precision in meters, integer as string,                  
+    "self-diag-has_fever": "1"                                         // boolean, as string
     "self-diag-temp-scale":"C"                                         // string, "C" = Celsius, "F" = Fahrenheit  
-    "self-diag-fever-temp":"38.9"                                      // float as string 
-    "self-diag-has_dry-cough":"0"                                      // boolean as string 
-    "self-diag-has_taste-loss":"0"                                     // boolean as string 
-    "vrfd-diag-has_test-positive:"0"                                   // boolean as string       
-    "vrfd-test-positive-by":"6620a86f-e87c-4566-9a45-b8ea32a2885d"     // string, testing agent-UUID string 4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4
+    "self-diag-fever-temp":"38.9"                                      // float, as string 
+    "self-diag-has_dry-cough":"0"                                      // boolean, as string 
+    "self-diag-has_taste-loss":"0"                                     // boolean, as string 
+    "vrfd-diag-has_test-positive:"0"                                   // boolean, as string       
+    "vrfd-test-positive-by":"6620a86f-e87c-4566-9a45-b8ea32a2885d"     // string, testing agent-UUID, v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4
     "vrfd-has-test_immunized:"0"                                       // boolean as string  
-    "vrfd-test-positive-by":"8dbee094-90d7-4faa-9e5f-fdad0ed4a7a3"     // string, testing agent-UUID string 4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4
+    "vrfd-test-positive-by":"8dbee094-90d7-4faa-9e5f-fdad0ed4a7a3"     // string, testing agent-UUID, v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4
 }
 ```
 ### 2.2 auth-data
