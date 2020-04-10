@@ -26,10 +26,11 @@ App/Session token-based authentication (tbd)
 
 This API verifies and/or creates trusted geolocations from user self-diagnostic time-series data from 3rd-party apps.
 
-## 2. API JSON data type definition   
+## 2. API JSON data type definition (time series)   
 ```
 diag-data {
-    "UUID":"369e1fac-820b-4695-98a4-e22901584e0c"                      // string 4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4
+    "user":"369e1fac-820b-4695-98a4-e22901584e0c"                      // string 4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4
+    "agent":"d303aea7-3604-46c5-84c9-ad2758fb2852"                      // string 4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4
     "tx-timestamp":"                                                   // UTC-timestamp
     "age":"55"                                                         // int as string
     "sex":"m"                                                          // string, "f" = female, "m" = male, 
@@ -42,23 +43,18 @@ diag-data {
     "self-diag-has_dry-cough":"0"                                      // boolean as string 
     "self-diag-has_taste-loss":"0"                                     // boolean as string 
     "vrfd-diag-has_test-positive:"0"                                   // boolean as string       
-    "vrfd-test-positive-by":"6620a86f-e87c-4566-9a45-b8ea32a2885d"     // string, agent-UUID string 4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4
+    "vrfd-test-positive-by":"6620a86f-e87c-4566-9a45-b8ea32a2885d"     // string, testing agent-UUID string 4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4
     "vrfd-has-test_immunized:"0"                                       // boolean as string  
-    "vrfd-test-positive-by":"8dbee094-90d7-4faa-9e5f-fdad0ed4a7a3"     // string, agent-UUID string 4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4
+    "vrfd-test-positive-by":"8dbee094-90d7-4faa-9e5f-fdad0ed4a7a3"     // string, testing agent-UUID string 4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4
 }
 
-api-auth-data 
-
-    auth-token: value as stringauth-token-user-type: string (options: user, agent, appliance)
+api-auth-data {
+    "auth-token":
+    "auth-token-type": value as stringauth-token-user-type: string (options: user, agent)
+    auth-agent { 
+        agent UUID - hashed value as string
+    }
 }
-
-type-auth-agent {
-
-    agent GUID - hashed value as string
-}
-
-type-auth-appliance {
-appliance GUID - hashed value as string
 
 api-alert data {
     to_user: GUID as string
