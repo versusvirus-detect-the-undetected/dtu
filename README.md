@@ -1,4 +1,4 @@
-# Covid19Clue API - DTU (detect the undetected)
+# Covid19Clue API v0.1 - DTU (detect the undetected)
 
 (work in progress)
 A web-based application programming interface to re-connect all third-party apps safely to exchange real-time diagnostic ​
@@ -37,9 +37,9 @@ Time-series dataset definition for messaging system. All data is optional, excep
 "user-diag": {
     "user":"369e1fac-820b-4695-98a4-e22901584e0c"                      // v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string
     "agent":"d303aea7-3604-46c5-84c9-ad2758fb2852"                     // v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string
-    "user-tx-timestamp":""                                             // user transmission time, unix UTC-timestamp, as string
+    "user-tx-timestamp":"1586483743"                                   // user transmission GMT time, unix UTC-timestamp, as string
     "user-tx_tz":"+0100"                                               // user timezone, string concatenation of "+" or "-" with "hhmm" time format, excluding daylight saving time, as string 
-    "agent-tx-timestamp":"1586485743"                                  // agent transmission time, unix UTC-timestamp, as string
+    "agent-tx-timestamp":"1586485743"                                  // agent transmission GMT time, unix UTC-timestamp, as string
     "agent-tx_tz":"+0100"                                              // agent timezone, string concatenation of "+" or "-" with "hhmm" time format, excluding daylight saving time, as string  
     "age":"55"                                                         // age, int as string
     "sex":"m"                                                          // sex, string, "f" = female, "m" = male 
@@ -50,6 +50,7 @@ Time-series dataset definition for messaging system. All data is optional, excep
     "self-diag-body-temp-scale":"C"                                    // temperature scale, "C" = Celsius, "F" = Fahrenheit, as string
     "self-diag-body-temp":"38.9"                                       // body temperature, float, as string 
     "self-diag-oxy-level: "96"                                         // oxygen level percentage, integer, as string
+    "self-diag-cough-sound-AI-result: "74"                             // cough-sound-AI-correspondance percentage, integer, as string
     "self-diag-has-dry-cough":"0"                                      // symptom, dry cough, boolean value, as string
     "self-diag-has-freq-sneezing":"0"                                  // symptom, frequent sneezing, boolean value, as string
     "self-diag-has-short-breath:"1"                                    // symptom, short breath, boolean value, as string 
@@ -73,19 +74,32 @@ Time-series dataset definition for messaging system. All data is optional, excep
 
 Time-series agent authentication dataset.  
 ```
-"authn-data": {
+"agent-authn": {
     "authn-token":"216f00f4be13890449c1852cffd7a8bd9557258eacda56e0b4e8166b943405cc"   // SHA-256 hash code, as string                                                    
     "authn-agent":"d303aea7-3604-46c5-84c9-ad2758fb2852"                               // v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string                                              
-    "authn-timestamp:"1586485642" 
-    "authn-timeout":"3600"                                                             // seconds, as string    
+    "authn-timestamp:"1586485642"                                                      // Authentication GMT time, unix UTC-timestamp, as string 
+    "authn-tz":"+0100"                                                                 // Authentication timezone, string concatenation of "+" or "-" with "hhmm" time format, excluding daylight saving time, as string 
+    "authn-timeout":"3600"                                                             // Authentication timeout, in seconds, as string    
 }
 ```
 ### 2.3 agent-authr
 
 Time-series agent authorization dataset.  
 ```
-
+"agent-authr": {
+    "agent":"d303aea7-3604-46c5-84c9-ad2758fb2852"                               // v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string
+    "timestamp:"1586485642"                                                      // Authorization GMT time, unix UTC-timestamp, as string 
+    "tz":"+0100"                                                                 // Authorization time zone, string concatenation of "+" or "-" with "hhmm" time format, excluding daylight saving time, as string 
+    "authorization":"0"                                                          // valid authorization, default = "0" = false, "1" = true
+    "type":"userapp"                                                             // Authorization type, "user-app", "health-app", "test-lab", "test-site", "self-test-appliance","NHO","WHO", as string
+    "admin":"contact-authr"                                                      // Authorized Agent admin contact, as      "contact-authr"   
+    "tech-admin":"contact-authr"                                                 // Authorized Agent technical admin contact, as contact-authr"
+}
 ```
+### 2.4 contact-authr
+```
+
+``` 
 ## API function calls
 ```
 
