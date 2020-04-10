@@ -64,13 +64,14 @@ Main dataset definition for messaging system time series. All personal diag data
 ```
 ### 2.3 alert-data 
 ```
-alert-data {
-    to_user: GUID as string
-    alert_message: string
-    alert_GMT_timestamp: datetime as string
-    alert_locale: localedata as string
-    alert_timezone: string
-    alert_severity_level: integer as string
+"alert-data": {
+    "alert-rcpt":"                                   // user UUID, v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string
+    "alert_message":"You tested covid19 negative."   // alert message, string
+    "alert_UTC_timestamp":                           // unix UTC timestamp, as string
+    "alert_timezone": " "                            //  
+    "alert_locale":" "                               // unix locale,  as string
+
+    "alert_severity_level": integer as string
 }
 ```
 ## API function calls
