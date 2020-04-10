@@ -6,9 +6,7 @@ A messaging application programming interface (API) specification for covid19 di
 
 ### 1.1 Covid19Clue API for mobile 3rd-party apps (API end-point scenario)
 
-Re-connect 3rd-party mobile apps to government, doctors, brand them "official".
-Provide user symptoms and geo data for predictions for all 3rd-party dashboard apps, epidemiologic dashboards
-Consent-based self-diagnostics collection and official geolocator data API service for 3rd-party apps.
+Re-connect 3rd-party mobile apps to government apps, health-apps, as trusted apps. Provide pseudonymous user diagnosis profiles for predictions for all 3rd-party public health dashboard apps, epidemiologic dashboards messaging API service.
 
 ### 1.2 Covid19Clue API for health offices, hospitals and physicians (API end-point scenario)
 
