@@ -40,7 +40,7 @@ Main dataset definition for messaging system time series. All personal diag data
     "sex":"m"                                                          // string, "f" = female, "m" = male, 
     "gps-lat:"46.9465"                                                 // float value as string
     "gps-long":"7.4443"                                                // float value as string
-    "gps-prec":"50"                                                    // integer as string, meters                  
+    "gps-prec":"50"                                                    // integer as string, in meters                  
     "self-diag-has_fever": "1"                                         // boolean as string
     "self-diag-temp-scale":"C"                                         // string, "C" = Celsius, "F" = Fahrenheit  
     "self-diag-fever-temp":"38.9"                                      // float as string 
@@ -55,8 +55,9 @@ Main dataset definition for messaging system time series. All personal diag data
 ### 2.2 auth-data
 ```
 "auth-data": {
-    "auth-token":" "                                                   //  
-    "auth-agent":" "                                                   // agent UUID - hashed value as string
+    "auth-token":"216f00f4be13890449c1852cffd7a8bd9557258eacda56e0b4e8166b943405cc"                                                  // string, SHA-256 hsh                                                    
+    "auth-agent":"d303aea7-3604-46c5-84c9-ad2758fb2852"                               // string, 4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4                                              
+    "auth-timeout":
     }
 }
 ```
