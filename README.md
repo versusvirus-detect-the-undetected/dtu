@@ -32,7 +32,7 @@ This API verifies and/or creates trusted geolocations from user self-diagnostic 
 
 ### 2.1 user-diag
 
-Time-series dataset definition for messaging system. All data is optional, except UUIDs for the user and the agent, is mandatory.  
+Time-series JSON diagnostic message dataset.  
 ```
 "user-diag": {
     "user":"369e1fac-820b-4695-98a4-e22901584e0c"                      // v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string
@@ -72,11 +72,11 @@ Time-series dataset definition for messaging system. All data is optional, excep
 ```
 ### 2.2 agent-authn
 
-Time-series agent authentication dataset.  
+Time-series JSON agent authentication message dataset.  
 ```
-"agent-authn": {
-    "authn-token":"216f00f4be13890449c1852cffd7a8bd9557258eacda56e0b4e8166b943405cc"   // SHA-256 hash code, as string                                                    
+"agent-authn": {                                                   
     "authn-agent":"d303aea7-3604-46c5-84c9-ad2758fb2852"                               // v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string                                              
+    "authn-token":"216f00f4be13890449c1852cffd7a8bd9557258eacda56e0b4e8166b943405cc"   // SHA-256 hash code, as string 
     "authn-timestamp:"1586485642"                                                      // Authentication GMT time, unix UTC-timestamp, as string 
     "authn-tz":"+0100"                                                                 // Authentication timezone, string concatenation of "+" or "-" with "hhmm" time format, excluding daylight saving time, as string 
     "authn-timeout":"3600"                                                             // Authentication timeout, in seconds, as string    
@@ -84,7 +84,7 @@ Time-series agent authentication dataset.
 ```
 ### 2.3 agent-authr
 
-Time-series agent authorization dataset.  
+JSON agent authorization dataset.  
 ```
 "agent-authr": {
     "agent":"d303aea7-3604-46c5-84c9-ad2758fb2852"                               // v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string
@@ -92,12 +92,31 @@ Time-series agent authorization dataset.
     "tz":"+0100"                                                                 // Authorization time zone, string concatenation of "+" or "-" with "hhmm" time format, excluding daylight saving time, as string 
     "authorization":"0"                                                          // valid authorization, default = "0" = false, "1" = true
     "type":"userapp"                                                             // Authorization type, "user-app", "health-app", "test-lab", "test-site", "self-test-appliance","NHO","WHO", as string
-    "admin":"contact-authr"                                                      // Authorized Agent admin contact, as      "contact-authr"   
-    "tech-admin":"contact-authr"                                                 // Authorized Agent technical admin contact, as "contact-authr"
+    "agent":"contact-authr"                                                      // Authorized Agent admin contact, as      "contact-authr"   
+    "agent-admin":"contact-authr"                                                 // Authorized Agent technical admin contact, as "contact-authr"
 }
 ```
 ### 2.4 contact-authr
+JSON contact authorization dataset. 
 ```
+"contact-authr": {
+    "contact": "4e8f2603-4591-4392-952f-bfbe86bd06eb"                                              // v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string
+     "agent":"d303aea7-3604-46c5-84c9-ad2758fb2852"                                                // v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string    
+     "agent-name":"Covidtracker"                                                                   // agent name, as string 
+     "agent-url":"https://covidtracker.ch"                                                         // valid url, as string 
+     "agent-org-fqdn": "covidtracker.ch"                                                           // valid org domain, as string 
+     "agent-org-name": "Canton of Bern"                                                            // organization name, as string 
+     "agent-org-spoc-usermail": "mailto:adminuser-at-covidtracker.ch"                              // valid uri, as string
+     "agent-org-spoc-password: "2207f568da6b4d1ba8a9cdebb18d5c79847a4fb23a41b27489a3c6d84aeab215"  // sha-256 salted password hash, as string  
+     "agent-org-spoc-tel-intl":"41123456789"                                                       // valid international phone number, as string
+     "agent-org-spoc-tel-ext:"12345"                                                               // internal extension, as string     
+     "agent-org-addr-line-1: "1234, Main Street"                                                   // address line 1, as string                                                                    
+     "agent-org addr-line-2: "P.O. Box 1234"                                                       // address line 2, as string 
+     "agent-org-city: "Bern"                                                                       // city, as string
+     "agent-org-zip: "3000"                                                                        // Postal code, as string     
+     "agent-org-region":"BE"                                                                       // region or county code, as string 
+     "agent-org-country":"Switzerland"                                                             // Country, as string 
+}
 
 ``` 
 ## API function calls
