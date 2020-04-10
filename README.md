@@ -1,4 +1,6 @@
-# Covid19Clue API (work in progress) - DTU (detect the undetected)
+# Covid19Clue API - DTU (detect the undetected)
+
+(work in progress)
 A web-based application programming interface to re-connect all third-party apps safely to exchange real-time diagnostic ​
 data, allowing to officially "brand" them as trusted appsby the Swiss Federal Office for Public Health or the WHO. ​
 
@@ -102,3 +104,4 @@ Main dataset definition for messaging system time series. All personal diag data
 ```
 
 ```
+(/work in progress)
