@@ -1,8 +1,6 @@
 # Covid19Clue API v0.1 - DTU (detect the undetected)
 
-(work in progress)
-A web-based application programming interface to re-connect all third-party apps safely to exchange real-time diagnostic ​
-data, allowing to officially "brand" them as trusted apps by the Swiss Federal Office for Public Health or the WHO. ​
+Web-based application reconnect API data specification for covid19 diagnostic data. Enables to re-connect all kinds of third-party apps safely to exchange real-time diagnostic data as messages, as well as allowing to officially authorize and authenticate them as trusted apps by the national and international public health offices such as e.g. the Swiss Federal Public Health Office or the WHO.
 
 ## 1 API usage scenarios and basic use cases description
 
@@ -147,32 +145,4 @@ JSON contact authorization dataset, with (bogus) example data.
      "agent-org-country":"Switzerland"                                                             // Country, as string 
 }
 ``` 
-## API function calls
-```
 
-```
-### get_latest_user_data(api-auth-data, GUID)
-```
-
-```
-### get_user_ts_data(api_auth_data,GUID);
-```
-
-```
-### get_users(api-auth-data, pagination as integer);
-```
-
-```
-### get_user_dataset_list(api-auth-data, pagination as integer);
-```
-
-```
-### push_user_alert(api-auth-data, GUID);
-```
-
-```
-### create_user(api_auth_data)
-```
-
-```
-(/work in progress)
