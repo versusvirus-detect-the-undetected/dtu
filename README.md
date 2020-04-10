@@ -40,7 +40,7 @@ JSON-like diagnostic profile message record for time series, with (bogus) exampl
 "profile-msg": {
     "profile":"369e1fac-820b-4695-98a4-e22901584e0c"                   // pseudonymous diagnostic profile v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string, mandatory
     "agent":"d303aea7-3604-46c5-84c9-ad2758fb2852"                     // agent v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string, mandatory
-    "user-tx-timestamp":"1586483743", optional                         // user transmission GMT time, unix UTC-timestamp, as string
+    "user-tx-timestamp":"1586483743"                                   // user transmission GMT time, unix UTC-timestamp, as string, optional 
     "user-tx_tz":"+0100"                                               // user timezone, string concatenation of "+" or "-" with "hhmm" time format, excluding daylight saving time, as string, optional 
     "agent-tx-timestamp":"1586485743"                                  // agent transmission GMT time, unix UTC-timestamp, as string, mandatory
     "agent-tx-tz":"+0100", mandatory                                   // agent timezone, string concatenation of "+" or "-" with "hhmm" time format, excluding daylight saving time, as string
