@@ -29,11 +29,11 @@ This API verifies and/or creates trusted geolocations from user self-diagnostic 
 ## API data type definition   
 
 ```
-user data {
-    GUID (global user ID): string
-    age: Integer value as string
-    sex: String 
-    geoposition-latitude: float value as string
+diag-data {
+    "UUID": "369e1fac-820b-4695-98a4-e22901584e0c"    // example version 4 UUID s. https://https://uuidgen.org/v/4
+    age: "55"                                         // int as string
+    sex: "m"                                          // string 
+    geoposition-latitude: " "                         // float value as string
     geoposition-longitude: float value as string
     geoposition-precision: integer as string
     diagnostics-has_cough: boolean as string
@@ -50,11 +50,12 @@ api-auth-data
 }
 
 type-auth-agent {
+
     agent GUID - hashed value as string
 }
 
 type-auth-appliance {
-appliance GUID -hashed value as string
+appliance GUID - hashed value as string
 
 api-alert data {
     to_user: GUID as string
