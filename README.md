@@ -53,12 +53,12 @@ Main dataset definition for messaging system time series. All personal diag data
     "vrfd-test-positive-by":"8dbee094-90d7-4faa-9e5f-fdad0ed4a7a3"     // string, testing agent-UUID, v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4
 }
 ```
-### 2.2 auth-data
+### 2.2 authorize-data
 ```
 "auth-data": {
     "auth-token":"216f00f4be13890449c1852cffd7a8bd9557258eacda56e0b4e8166b943405cc"   // string, SHA-256 hash code                                                    
-    "auth-agent":"d303aea7-3604-46c5-84c9-ad2758fb2852"                               // string, 4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4                                              
-    "auth-timeout":
+    "authorize-agent":"d303aea7-3604-46c5-84c9-ad2758fb2852"                          // v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4                                              
+    "auth-timeout":"3600"                                                             // seconds, as string    
     }
 }
 ```
