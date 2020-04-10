@@ -63,7 +63,7 @@ Time-series dataset definition for messaging system. All personal diag data is o
     "self-diag-has-tachycardy:"1"                                      // symptom, tachycardy at rest, boolean value, as string
     "self-diag-has-cardial-arrhythmy:"0"                               // symptom, cardial arrhythmy, boolean value, as string 
     "vrfd-diag-virustest-result:"0"                                    // verfied virus test result, "0" = negative, "1" = positive, boolean value, as string       
-    "vrfd-diag-immunetest-result:"0"                                        // verfied immune test result, "0" = negative, "1" = positive, boolean value, as string       
+    "vrfd-diag-immunetest-result:"0"                                   // verfied immune test result, "0" = negative, "1" = positive, boolean value, as string       
 }
 ```
 ### 2.2 auth-data
