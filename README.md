@@ -37,8 +37,10 @@ Time-series dataset definition for messaging system. All data is optional, excep
 "diag-data": {
     "user":"369e1fac-820b-4695-98a4-e22901584e0c"                      // v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string
     "agent":"d303aea7-3604-46c5-84c9-ad2758fb2852"                     // v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string
-    "tx-timestamp":"                                                   // transmission time, unix UTC-timestamp, as string
-    "tx_tz":"+0100"                                                    // string concatenation of "+" or "-" with "hhmm" time format, excluding daylight saving time, as string  
+    "user-tx-timestamp":"                                              // agent transmission time, unix UTC-timestamp, as string
+    "user-tx_tz":"+0100"                                               // agent timezone, string concatenation of "+" or "-" with "hhmm" time format, excluding daylight saving time, as string 
+    "agent-tx-timestamp":"                                             // agent transmission time, unix UTC-timestamp, as string
+    "agent-tx_tz":"+0100"                                              // agent timezone, string concatenation of "+" or "-" with "hhmm" time format, excluding daylight saving time, as string  
     "age":"55"                                                         // age, int as string
     "sex":"m"                                                          // sex, string, "f" = female, "m" = male 
     "gps-lat:"46.9465"                                                 // GPS latitude, float value as string
@@ -66,12 +68,14 @@ Time-series dataset definition for messaging system. All data is optional, excep
     "vrfd-diag-immunetest-result:"0"                                   // verfied immune test result, "0" = negative, "1" = positive, boolean value, as string       
 }
 ```
-### 2.2 auth-data
+### 2.2 authn-data
+
+Time-series authentication dataset.  
 ```
-"auth-data": {
-    "auth-token":"216f00f4be13890449c1852cffd7a8bd9557258eacda56e0b4e8166b943405cc"   // SHA-256 hash code, as string                                                    
-    "authorize-agent":"d303aea7-3604-46c5-84c9-ad2758fb2852"                          // v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string                                              
-    "auth-timeout":"3600"                                                             // seconds, as string    
+"authr-data": {
+    "authn-token":"216f00f4be13890449c1852cffd7a8bd9557258eacda56e0b4e8166b943405cc"   // SHA-256 hash code, as string                                                    
+    "authn-agent":"d303aea7-3604-46c5-84c9-ad2758fb2852"                          // v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string                                              
+    "authn-timeout":"3600"                                                             // seconds, as string    
     }
 }
 ```
