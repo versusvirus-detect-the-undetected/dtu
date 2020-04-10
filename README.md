@@ -92,8 +92,7 @@ JSON agent authorization dataset.
     "tz":"+0100"                                                                 // Authorization time zone, string concatenation of "+" or "-" with "hhmm" time format, excluding daylight saving time, as string 
     "authorization":"0"                                                          // valid authorization, default = "0" = false, "1" = true
     "type":"userapp"                                                             // Authorization type, "user-app", "health-app", "test-lab", "test-site", "self-test-appliance","NHO","WHO", as string
-    "agent":"contact-authr"                                                      // Authorized Agent admin contact, as      "contact-authr"   
-    "agent-admin":"contact-authr"                                                 // Authorized Agent technical admin contact, as "contact-authr"
+    "agent-admin":"contact-authr"                                                // Authorized Agent admin contact, as "contact-authr"
 }
 ```
 ### 2.4 contact-authr
