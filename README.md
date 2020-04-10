@@ -2,7 +2,7 @@
 
 (work in progress)
 A web-based application programming interface to re-connect all third-party apps safely to exchange real-time diagnostic ​
-data, allowing to officially "brand" them as trusted appsby the Swiss Federal Office for Public Health or the WHO. ​
+data, allowing to officially "brand" them as trusted apps by the Swiss Federal Office for Public Health or the WHO. ​
 
 ## 1 API usage scenarios and basic use cases description
 
