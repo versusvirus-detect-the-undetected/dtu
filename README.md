@@ -26,22 +26,25 @@ App/Session token-based authentication (tbd)
 
 This API verifies and/or creates trusted geolocations from user self-diagnostic time-series data from 3rd-party apps.
 
-## API data type definition   
-
+## 2. API JSON data type definition   
 ```
 diag-data {
-    "UUID": "369e1fac-820b-4695-98a4-e22901584e0c"    // example version 4 UUID s. https://https://uuidgen.org/v/4
-    age: "55"                                         // int as string
-    sex: "m"                                          // string 
-    geoposition-latitude: " "                         // float value as string
-    geoposition-longitude: float value as string
-    geoposition-precision: integer as string
-    diagnostics-has_cough: boolean as string
-    diagnostics-has_fever: boolean as string
-    diagnostics-fever-temperature: float as string
-    diagnostics-has_taste_loss: boolean as string
-    diagnostics-has_tested_positive: boolean as string
-    diagnostics-is_immunized: boolean as string
+    "UUID":"369e1fac-820b-4695-98a4-e22901584e0c"                      // string 4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4
+    "tx-timestamp":"                                                   // UTC-timestamp
+    "age":"55"                                                         // int as string
+    "sex":"m"                                                          // string, "f" = female, "m" = male, 
+    "gps-lat:"46.9465"                                                 // float value as string
+    "gps-long":"7.4443"                                                // float value as string
+    "gps-prec":"50"                                                    // integer as string, meters                  
+    "self-diag-has_fever": "1"                                         // boolean as string
+    "self-diag-temp-scale":"C"                                         // string, "C" = Celsius, "F" = Fahrenheit  
+    "self-diag-fever-temp":"38.9"                                      // float as string 
+    "self-diag-has_dry-cough":"0"                                      // boolean as string 
+    "self-diag-has_taste-loss":"0"                                     // boolean as string 
+    "vrfd-diag-has_test-positive:"0"                                   // boolean as string       
+    "vrfd-test-positive-by":"6620a86f-e87c-4566-9a45-b8ea32a2885d"     // string, agent-UUID string 4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4
+    "vrfd-has-test_immunized:"0"                                       // boolean as string  
+    "vrfd-test-positive-by":"8dbee094-90d7-4faa-9e5f-fdad0ed4a7a3"     // string, agent-UUID string 4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4
 }
 
 api-auth-data 
