@@ -46,8 +46,8 @@ Time-series dataset definition for messaging system. All personal diag data is o
     "gps-prec":"50"                                                    // GPS precision in meters, integer as string                  
     "self-diag-has_fever": "1"                                         // symptom, fever, boolean, as string
     "self-diag-body-temp-scale":"C"                                    // temperature scale, "C" = Celsius, "F" = Fahrenheit, as string
-    "self-diag-oxy-level: "96"                                         // symptom, oxygen level percentage, integer, as string
     "self-diag-body-temp":"38.9"                                       // body temperature, float, as string 
+    "self-diag-oxy-level: "96"                                         // symptom, oxygen level percentage, integer, as string
     "self-diag-has-dry-cough":"0"                                      // symptom, dry cough, boolean value, as string
     "self-diag-has-freq-sneezing":"0"                                  // symptom, frequent sneezing, boolean value, as string
     "self-diag-has-short-breath:"1"                                    // symptom, short breath, boolean value, as string 
