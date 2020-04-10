@@ -26,9 +26,11 @@ App/Session token-based authentication (tbd)
 
 This API verifies and/or creates trusted geolocations from user self-diagnostic time-series data from 3rd-party apps.
 
-## 2. API JSON data type definition (time series)
+## 2. Covid19Clue API JSON data type definition
 
 ### 2.1 diag-data
+
+Main dataset definition for messaging system time series. All personal diag data is optional, UUID for user, agent is mandatory.  
 ```
 diag-data {
     "user":"369e1fac-820b-4695-98a4-e22901584e0c"                      // string 4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4
