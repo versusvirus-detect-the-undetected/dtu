@@ -33,7 +33,7 @@ This API verifies and/or creates trusted geolocations from user self-diagnostic 
 ### 2.1 Profile message record
 
 Time-series JSON diagnostic profile message record, with (bogus) example data.  
-```json
+```
 "profile-msg": {
     "profile":"369e1fac-820b-4695-98a4-e22901584e0c"                   // pseudonymous diagnostic profile v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string
     "agent":"d303aea7-3604-46c5-84c9-ad2758fb2852"                     // agent v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string
