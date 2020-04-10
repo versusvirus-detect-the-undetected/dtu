@@ -1,7 +1,7 @@
 # Covid19Clue API message specification - DTU (detect the undetected)
 
 
-A application programming interface (API) message specification for covid19 diagnostic data. Enables to re-connect all kinds of disparate third-party covid19 apps safely and securely, to exchange pseudonymous diagnostic profile data. Moreover, this message API specification defines also the messages allowing to officially authorize and authenticate a wide range of re-connected covid19 apps as trusted apps. This can  be achieved by national and international official public health organizations such as e.g. the Swiss Federal Public Health Office or the World Health Organization.
+An application programming interface (API) message specification for covid19 diagnostic data. Enables to re-connect all kinds of disparate third-party covid19 apps safely and securely, to exchange pseudonymous diagnostic profile data. Moreover, this message API specification defines also the messages allowing to officially authorize and authenticate a wide range of re-connected covid19 apps as trusted apps. This can  be achieved by national and international official public health organizations such as e.g. the Swiss Federal Public Health Office or the World Health Organization.
 
 The specified Covid19Clue API messages are in a JSON-like format, with comments and example data, thus cannot be used in code without modification - they serve for specification purposes only. For use in a large-scale messaging system, they must be adapted. 
 
@@ -16,7 +16,7 @@ Re-connect 3rd-party mobile apps via this endpoint. Provide pseudonymous user di
 
 ### 1.2 Covid19Clue API message end-point scenario description for health offices, hospitals and physicians 
 
-This API end-point reconnects 3rd-party big-data apps for epidemiologics & prediction in governments as well as 3rd party health care apps for physicians' patient management to get infection data and patient profiles in near-real time. It e.g. helps physicians to speed up writing and revoking work dispenses in case of positive test results and/or ordered quarantine, hospitalization, etc.
+This API end-point reconnects 3rd-party big-data apps for epidemiologics & prediction in governments as well as 3rd-party health care apps for physicians' patient management to get infection data and patient profiles in near-real time. It e.g. helps physicians to speed up writing and revoking work dispenses in case of positive test results and/or ordered quarantine, hospitalization, etc.
 
 ### 1.3 Covid19Clue API message end-point scenario description for test labs, home appliances 
 
