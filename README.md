@@ -68,13 +68,15 @@ Time-series JSON diagnostic message dataset, with (bogus) example data.
     "self-diag-has-cardial-arrhythmy:"0"                               // symptom, cardial arrhythmy, boolean value, default = "0", as string 
     "vrfd-diag-has-virustest:"0"                                       // verified tested for virus, boolean value, default = "0", as string 
     "vrfd-diag-virustest-result:"0"                                    // verified virus test result, boolean value, default = "0", as string       
-    "vrfd-diag-immunetest-result:"0"                                   // verified immune test result, boolean value default = "0", as string       
-    "diag-stage":"1"                                                   // "0" = undiagnosed,
+    "vrfd-diag-immunetest-result:"0"                                   // verified immune test result, boolean value, default = "0", as string
+     vrfd-is-plasma-donor:"0"                                          // verified plasma donor, boolean value, default = "0", as string
+    "stage":"1"                                                        // "0" = undiagnosed,
                                                                        // "1" = self-diagnosed,       
-                                                                       // "2" = verified-diagnosed,   
+                                                                       // "2" = verified-diagnosed-negative,
+                                                                       // "3" = verified-diagnosed-positive,
                                                                        // integer, as string
 
-    "quarantine-status":"1"                                            // "0" = shelter-at-home-commuting,
+   "quarantine":"1"                                                    // "0" = shelter-at-home-commuting,
                                                                        // "1" = shelter-at-home-permanent,  
                                                                        // "2" = ordered-at-home,       
                                                                        // "3" = hospitalized,   
