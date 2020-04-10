@@ -93,7 +93,7 @@ Time-series agent authorization dataset.
     "authorization":"0"                                                          // valid authorization, default = "0" = false, "1" = true
     "type":"userapp"                                                             // Authorization type, "user-app", "health-app", "test-lab", "test-site", "self-test-appliance","NHO","WHO", as string
     "admin":"contact-authr"                                                      // Authorized Agent admin contact, as      "contact-authr"   
-    "tech-admin":"contact-authr"                                                 // Authorized Agent technical admin contact, as contact-authr"
+    "tech-admin":"contact-authr"                                                 // Authorized Agent technical admin contact, as "contact-authr"
 }
 ```
 ### 2.4 contact-authr
