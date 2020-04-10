@@ -1,8 +1,11 @@
 # Covid19Clue API message specification v0.1 - DTU (detect the undetected)
 
+
 A application programming interface (API) message specification for covid19 diagnostic data. Enables to re-connect all kinds of disparate third-party covid19 apps safely and securely, to exchange pseudonymous diagnostic profile data. Moreover, this message API specification defines also the messages allowing to officially authorize and authenticate a wide range of re-connected covid19 apps as trusted apps. This can  be achieved by national and international official public health organizations such as e.g. the Swiss Federal Public Health Office or the World Health Organization.
 
-## 1 Covid19Clue API usage scenarios description
+
+## 1 Covid19Clue API message end-point scenario descriptions
+
 
 ### 1.1 Covid19Clue API message end-point scenario for mobile 3rd-party apps 
 
@@ -23,6 +26,7 @@ This API end-point specification defines app session and token-based authenticat
 ### 1.5 Covid19Clue API end-point scenario for authorization 
 
 This API specification defines app and app contact authorization record types. 
+
 
 ## 2. Covid19Clue API JSON data type definitions
 
@@ -83,7 +87,7 @@ JSON-like diagnostic profile message record for time series, with (bogus) exampl
 ```
 ### 2.2 Agent authentication message record 
 
-Time-series JSON-like agent authentication message record for time series, with (bogus) example data.    
+JSON-like agent authentication message record for time series, with (bogus) example data.    
 ```
 "agent-authn-msg": {                                                   
     "agent":"d303aea7-3604-46c5-84c9-ad2758fb2852"                               // agent v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string                                              
@@ -96,7 +100,7 @@ Time-series JSON-like agent authentication message record for time series, with 
 ```
 ### 2.3 Contact authentication message record 
 
-Time-series JSON-like agent contact authentication message record for time series, with (bogus) example data.    
+JSON-like agent contact authentication message record for time series, with (bogus) example data.    
 ```
 "contact-authn-msg": {                                                   
     "contact":"4e8f2603-4591-4392-952f-bfbe86bd06eb"                             // contact v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string
@@ -110,7 +114,7 @@ Time-series JSON-like agent contact authentication message record for time serie
 ```
 ### 2.3 Agent authorization record
 
-JSON-like agent authorization dataset, with (bogus) data examples.    
+JSON-like agent authorization record, with (bogus) data examples.    
 ```
 "agent-authr": {
     "agent":"d303aea7-3604-46c5-84c9-ad2758fb2852"                               // agent v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string
@@ -121,7 +125,8 @@ JSON-like agent authorization dataset, with (bogus) data examples.
 }
 ```
 ### 2.4 Contact authorization record 
-JSON-like contact authorization dataset, with (bogus) example data.
+
+JSON-like contact authorization record, with (bogus) example data.
 ```
 "contact-authr": {
     "contact": "4e8f2603-4591-4392-952f-bfbe86bd06eb"                                              // agent contact, v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string
