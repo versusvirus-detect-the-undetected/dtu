@@ -45,7 +45,8 @@ Time-series JSON diagnostic message dataset.
     "sex":"m"                                                          // sex, string, "f" = female, "m" = male 
     "gps-lat:"46.9465"                                                 // GPS latitude, float value as string
     "gps-long":"7.4443"                                                // GPS longitude, float value as string
-    "gps-prec":"50"                                                    // GPS precision in meters, integer as string                  
+    "gps-prec":"50"                                                    // GPS precision in meters, integer as string
+    "infectuous_proximity"                                             // warning flag, boolean value, default = "0", as string   
     "self-diag-has_fever": "1"                                         // symptom, fever, boolean, as string
     "self-diag-body-temp-scale":"C"                                    // temperature scale, "C" = Celsius, "F" = Fahrenheit, as string
     "self-diag-body-temp":"38.9"                                       // body temperature, float, as string 
