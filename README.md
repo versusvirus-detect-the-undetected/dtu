@@ -12,7 +12,7 @@ The specified Covid19Clue API messages (see below, section 2) are in a JSON-like
 
 ### 1.1 Covid19Clue API message end-point scenario for mobile 3rd-party apps 
 
-Re-connect 3rd-party mobile self-diagnose and tracker apps via this endpoint. Provide pseudonymous user diagnosis profile message records for predictions for all 3rd-party public health dashboard apps, epidemiologic dashboards via a messaging API service.
+Re-connect 3rd-party mobile self-diagnose and tracker and proximity warning apps to exchange pseudonymous covid19 health profile updates via this messaging service API endpoint. Exchange pseudonymous user diagnosis profile message records in update time series for predictions for all 3rd-party public health dashboard apps, epidemiologic dashboards via a messaging service API.
 
 ### 1.2 Covid19Clue API message end-point scenario description for health offices, hospitals and physicians 
 
