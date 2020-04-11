@@ -79,7 +79,7 @@ JSON-like diagnostic profile message record for time series, with (bogus) exampl
                                                                        // "2" = ordered-at-home,       
                                                                        // "3" = hospitalized,   
                                                                        // "4" = immunized-released,
-                                                                       // integer, as string, mandatory
+                                                                       // integer, as string, optional
 }
 ```
 ### 2.2 Agent authentication message record 
