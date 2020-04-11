@@ -70,21 +70,23 @@ JSON-like diagnostic profile message record for time series, with (bogus) exampl
     "self-diag-has-tachycardy:"1"                                      // symptom, tachycardy at rest, boolean value, default = "0", as string, optional
     "self-diag-has-cardial-arrhythmy:"0"                               // symptom, cardial arrhythmy, boolean value, default = "0", as string, optional 
     "vrfd-diag-has-virustest:"0"                                       // verified tested for virus, boolean value, default = "0", as string, optional 
-    "vrfd-diag-virustest-result:"0"                                    // verified virus test result, boolean value, default = "0", as string, optional       
+    "vrfd-diag-virustest-result:"0"                                    // verified virus test result, boolean value, default = "0", as string, optional
+    "vrfd-diag-has-immunetest:"0"                                      // verified tested for immunity, boolean value, default = "0", as string, optional 
     "vrfd-diag-immunetest-result:"0"                                   // verified immune test result, boolean value, default = "0", as string, optional
      vrfd-is-plasma-donor:"0"                                          // verified plasma donor, boolean value, default = "0", as string, optional
     "stage":"1"                                                        // "0" = undiagnosed,
                                                                        // "1" = self-diagnosed,       
-                                                                       // "2" = verified-diagnosed-negative,
-                                                                       // "3" = verified-diagnosed-positive,
-                                                                       // integer, as string, optional
+                                                                       // "2" = verified-virustest
+                                                                       // "4" = verified-immunetest-negative,
+                                                                       // "5" = verified-immunetest-positive,
+                                                                       // integer, as string, mandatory
 
    "quarantine":"1"                                                    // "0" = shelter-at-home-commuting,
                                                                        // "1" = shelter-at-home-permanent,  
                                                                        // "2" = ordered-at-home,       
                                                                        // "3" = hospitalized,   
                                                                        // "4" = immunized-released,
-                                                                       // integer, as string, optional
+                                                                       // integer, as string, mandatory
 }
 ```
 ### 2.2 Agent authentication message record 
