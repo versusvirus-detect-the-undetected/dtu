@@ -1,7 +1,7 @@
 # DTU (detect the undetected) - Covid19Clue API message specification 
 
 
-An application programming interface (API) message specification for covid19 diagnostic data. Enables to re-connect all kinds of disparate third-party covid19 apps safely and securely, to exchange pseudonymous diagnostic profile data. Moreover, this message API specification defines also the messages allowing to officially authorize and authenticate a wide range of re-connected covid19 apps as trusted apps. This can  be achieved by national and international official public health organizations such as e.g. the Swiss Federal Public Health Office or the World Health Organization.
+An application programming interface (API) message specification for covid19 diagnostic data. Enables to re-connect all kinds of disparate third-party covid19 apps safely and securely, to exchange pseudonymous diagnostic profile data. Moreover, this API message specification defines also message formats to allow to officially authorize and authenticate a wide range of re-connected covid19 apps as trusted apps. This could be achieved by national and international official public health organizations patronizing a future API and its infrastucture, such as e.g. the Swiss Federal Public Health Office or the U.S. CDC on a national level, and ultimately, the World Health Organization.
 
 The specified Covid19Clue API messages are in a JSON-like format, with comments and example data, thus cannot be used in code without modification - they serve for specification purposes only. For use in large-scale messaging systems, they must be adapted. 
 
