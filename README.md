@@ -1,7 +1,7 @@
 # DTU (detect the undetected) - Covid19Clue API message specification 
 
 
-An application programming interface (API) message specification for covid19 diagnostic data. Enables to re-connect all kinds of disparate third-party covid19 apps safely and securely, to exchange pseudonymous diagnostic profile data. Moreover, this API message specification defines also message formats to allow to officially authorize and authenticate a wide range of re-connected covid19 apps as trusted apps. This could be achieved by national and international official public health organizations patronizing a future API and its infrastucture, such as e.g. the Swiss Federal Public Health Office or the U.S. CDC on a national level, and ultimately, the World Health Organization.
+An application programming interface (API) message specification for covid19 diagnostic data. Enables to re-connect all kinds of disparate third-party covid19 apps safely and securely, to exchange pseudonymous diagnostic profile data as a time-series of messages. Moreover, this API message specification defines also message formats to allow to officially authorize and authenticate a wide range of re-connected covid19 apps as trusted apps. This could be achieved by national and international official public health organizations patronizing a future API and its infrastucture, such as e.g. the Swiss Federal Public Health Office or the U.S. CDC on a national level, and ultimately, the World Health Organization.
 
 Currently, no proper API implementation of Covid19Clue API messages exists (yet), but read on to find some very brief API message end-point scenarios below in section 1, developed during the versusvirus.ch hackathon by our team, see the presentation submitted by the team [here](http://gofile.me/4VWZL/LSdTRdgEC).
 
@@ -12,7 +12,7 @@ The specified Covid19Clue API messages (see below, section 2) are in a JSON-like
 
 ### 1.1 Covid19Clue API message end-point scenario for mobile 3rd-party apps 
 
-Re-connect 3rd-party mobile apps via this endpoint. Provide pseudonymous user diagnosis profile message records for predictions for all 3rd-party public health dashboard apps, epidemiologic dashboards via a messaging API service.
+Re-connect 3rd-party mobile self-diagnose and tracker apps via this endpoint. Provide pseudonymous user diagnosis profile message records for predictions for all 3rd-party public health dashboard apps, epidemiologic dashboards via a messaging API service.
 
 ### 1.2 Covid19Clue API message end-point scenario description for health offices, hospitals and physicians 
 
@@ -20,7 +20,7 @@ This API end-point reconnects 3rd-party big-data apps for epidemiologics & predi
 
 ### 1.3 Covid19Clue API message end-point scenario description for test labs, home appliances 
 
-This API end-point scenario connects to Test Lab computers and appliances, as well as home testing appliances IoT (Internet-of-Things) in a machine-to-machine future.
+This API end-point scenario connects to Test Lab computers and appliances, as well as home testing IoT (Internet-of-Things) appliances in a machine-to-api scenario.
 
 ### 1.4 Covid19Clue API message end-point scenario description for authentication 
 
@@ -54,7 +54,7 @@ JSON-like diagnostic profile message record for time series, with (bogus) exampl
     "self-diag-body-temp-scale":"C"                                    // temperature scale, "C" = Celsius, "F" = Fahrenheit, as string, optional
     "self-diag-body-temp":"38.9"                                       // body temperature, float, as string, optional 
     "self-diag-oxy-level:"96"                                          // oxygen level percentage, integer, as string, optional
-    "self-diag-cough-sound-AI-result: "74"                             // cough-sound-AI-correspondance percentage, integer, as string, optional
+    "self-diag-cough-sound-AI-result:"74"                              // cough-sound-AI-correspondance percentage, integer, as string, optional
     "self-diag-has-dry-cough":"0"                                      // symptom, dry cough, boolean value, default = "0" as string, optional
     "self-diag-has-freq-sneezing":"0"                                  // symptom, frequent sneezing, boolean value, default = "0"  as string, optional
     "self-diag-has-short-breath:"1"                                    // symptom, short breath, boolean value, default = "0" as string, optional 
