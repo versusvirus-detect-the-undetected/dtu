@@ -142,11 +142,11 @@ JSON-like contact authorization record, with (bogus) example data.
      "agent-org-spoc-usermail": "mailto:admin-at-covidtracker.ch"                                  // valid mail uri, as string
      "agent-org-spoc-password: "2207f568da6b4d1ba8a9cdebb18d5c79847a4fb23a41b27489a3c6d84aeab215"  // sha-256 salted password hash, as string  
      "agent-org-spoc-tel-intl":"41123456789"                                                       // valid international phone number, as string
-     "agent-org-spoc-tel-ext:"12345"                                                               // internal extension, as string, optional     
-     "agent-org-addr-line-1: "1234, Main Street"                                                   // address line 1, as string                                                                    
-     "agent-org addr-line-2: "P.O. Box 1234"                                                       // address line 2, as string, optional 
-     "agent-org-city: "Bern"                                                                       // city, as string
-     "agent-org-zip: "3000"                                                                        // Postal code, as string     
+     "agent-org-spoc-tel-ext":"12345"                                                               // internal extension, as string, optional     
+     "agent-org-addr-line-1":"1234, Main Street"                                                   // address line 1, as string                                                                    
+     "agent-org addr-line-2":"P.O. Box 1234"                                                       // address line 2, as string, optional 
+     "agent-org-city":"Bern"                                                                       // city, as string
+     "agent-org-zip":"3000"                                                                        // Postal code, as string     
      "agent-org-region":"BE"                                                                       // region or county code, as string 
      "agent-org-country":"Switzerland"                                                             // Country, as string 
 }                                                                                                  // fields are mandatory, exceptions see field comments. 
