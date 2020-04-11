@@ -35,7 +35,7 @@ This API specification defines app and app contact authorization record types.
 
 ### 2.1 Profile message record
 
-JSON-like diagnostic profile message record for time series, with (bogus) example data.  
+JSON-like diagnostic profile message record for time series, with example data.  
 ```
 "profile-msg": {
     "profile":"369e1fac-820b-4695-98a4-e22901584e0c"                   // pseudonymous diagnostic profile v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string, mandatory
@@ -84,7 +84,7 @@ JSON-like diagnostic profile message record for time series, with (bogus) exampl
 ```
 ### 2.2 Agent authentication message record 
 
-JSON-like agent authentication message record for time series, with (bogus) example data.    
+JSON-like agent authentication message record for time series, with example data.    
 ```
 "agent-authn-msg": {                                                   
     "agent":"d303aea7-3604-46c5-84c9-ad2758fb2852"                               // agent v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string                                              
@@ -97,7 +97,7 @@ JSON-like agent authentication message record for time series, with (bogus) exam
 ```
 ### 2.3 Contact authentication message record 
 
-JSON-like agent contact authentication message record for time series, with (bogus) example data.    
+JSON-like agent contact authentication message record for time series, with example data.    
 ```
 "contact-authn-msg": {                                                   
     "contact":"4e8f2603-4591-4392-952f-bfbe86bd06eb"                             // contact v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string
@@ -111,7 +111,7 @@ JSON-like agent contact authentication message record for time series, with (bog
 ```
 ### 2.3 Agent authorization record
 
-JSON-like agent authorization record, with (bogus) data examples.    
+JSON-like agent authorization record, with data examples.    
 ```
 "agent-authr": {
     "agent":"d303aea7-3604-46c5-84c9-ad2758fb2852"                               // agent v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string
