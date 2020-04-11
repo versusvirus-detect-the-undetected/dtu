@@ -42,8 +42,8 @@ JSON-like diagnostic profile message record for time series, with example data.
     "agent":"d303aea7-3604-46c5-84c9-ad2758fb2852"                     // agent v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string, mandatory
     "agent-tx-timestamp":"1586485743"                                  // agent transmission GMT time, unix UTC-timestamp, as string, mandatory
     "agent-tx-tz":"+0100"                                              // agent timezone, string concatenation of "+" or "-" with "hhmm" time format, excluding daylight saving time, as string, mandatory
-    "user-tx-timestamp":"1586483743"                                   // user client's timestamp of GMT time, unix UTC-timestamp, as string, optional 
-    "user-tx_tz":"+0100"                                               // user client's of timezone, string concatenation of "+" or "-" with "hhmm" time format, excluding daylight saving time, as string, optional 
+    "profile-tx-timestamp":"1586483743"                                // profile message update timestamp of GMT time, unix UTC-timestamp, as string, optional 
+    "profile-tx_tz":"+0100"                                            // profile message update of timezone, string concatenation of "+" or "-" with "hhmm" time format, excluding daylight saving time, as string, optional 
     "agent-gps-lat:"46.9465"                                           // GPS latitude, float value, as string, optional
     "agent-gps-long":"7.4443"                                          // GPS longitude, float value, as string, optional
     "agent-gps-prec":"50"                                              // GPS precision in meters, integer as string, optional
@@ -54,7 +54,7 @@ JSON-like diagnostic profile message record for time series, with example data.
     "self-diag-body-temp-scale":"C"                                    // temperature scale, "C" = Celsius, "F" = Fahrenheit, as string, optional
     "self-diag-body-temp":"38.9"                                       // body temperature, float, as string, optional 
     "self-diag-oxy-level:"96"                                          // oxygen level percentage, integer, as string, optional
-    "self-diag-cough-sound-AI-result:"74"                              // cough-sound-AI correspondance percentage, integer, as string, optional
+    "self-diag-cough-sound-AI-result:"74"                              // cough sound analysis AI correspondance percentage, integer, as string, optional
     "self-diag-has-dry-cough":"0"                                      // symptom, dry cough, boolean value, default = "0" as string, optional
     "self-diag-has-freq-sneezing":"0"                                  // symptom, frequent sneezing, boolean value, default = "0"  as string, optional
     "self-diag-has-short-breath:"1"                                    // symptom, short breath, boolean value, default = "0" as string, optional 
