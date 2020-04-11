@@ -5,7 +5,7 @@ An application programming interface (API) message specification for covid19 dia
 
 The specified Covid19Clue API messages are in a JSON-like format, with comments and example data, thus cannot be used in code without modification - they serve for specification purposes only. For use in large-scale messaging systems, they must be adapted. 
 
-Currently, no proper API implementation of Covid19Clue API messages exists (yet), but find some very brief API message end-point scenarios here, developed during the versusvirus.ch hackathon by our team:  
+Currently, no proper API implementation of Covid19Clue API messages exists (yet), but find some very brief API message end-point scenarios here, developed during the versusvirus.ch hackathon by our team (see presentation [here](http://gofile.me/4VWZL/LSdTRdgEC)
 
 ## 1 Covid19Clue API message end-point scenario descriptions
 
