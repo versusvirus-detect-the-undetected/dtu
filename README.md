@@ -132,12 +132,12 @@ JSON-like contact authorization record, with (bogus) example data.
      "tz":"+0100"                                                                                  // Authorization time zone, string concatenation of "+" or "-" with "hhmm" time format, excluding daylight saving time, as string 
      "agent-name":"Covidtracker"                                                                   // agent name, as string 
      "agent-url":"https://covidtracker.ch"                                                         // valid url, as string 
-     "agent-org-fqdn":"covidtracker.ch"                                                           // valid org domain, as string 
-     "agent-org-name":"Canton of Bern"                                                            // organization name, as string 
-     "agent-org-spoc-usermail":"mailto:admin-at-covidtracker.ch"                                  // valid mail uri, as string
-     "agent-org-spoc-password:"2207f568da6b4d1ba8a9cdebb18d5c79847a4fb23a41b27489a3c6d84aeab215"  // sha-256 salted password hash, as string  
+     "agent-org-fqdn":"covidtracker.ch"                                                            // valid org domain, as string 
+     "agent-org-name":"Canton of Bern"                                                             // organization name, as string 
+     "agent-org-spoc-usermail":"mailto:admin-at-covidtracker.ch"                                   // valid mail uri, as string
+     "agent-org-spoc-password:"2207f568da6b4d1ba8a9cdebb18d5c79847a4fb23a41b27489a3c6d84aeab215"   // sha-256 salted password hash, as string  
      "agent-org-spoc-tel-intl":"41123456789"                                                       // valid international phone number, as string
-     "agent-org-spoc-tel-ext":"12345"                                                               // internal extension, as string, optional     
+     "agent-org-spoc-tel-ext":"12345"                                                              // internal extension, as string, optional     
      "agent-org-addr-line-1":"1234, Main Street"                                                   // address line 1, as string                                                                    
      "agent-org addr-line-2":"P.O. Box 1234"                                                       // address line 2, as string, optional 
      "agent-org-city":"Bern"                                                                       // city, as string
