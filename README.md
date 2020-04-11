@@ -73,15 +73,8 @@ JSON-like diagnostic profile message record for time series, with (bogus) exampl
     "vrfd-diag-virustest-result:"0"                                    // verified virus test result, boolean value, default = "0", as string, optional
     "vrfd-diag-has-immunetest:"0"                                      // verified tested for immunity, boolean value, default = "0", as string, optional 
     "vrfd-diag-immunetest-result:"0"                                   // verified immune test result, boolean value, default = "0", as string, optional
-     vrfd-is-plasma-donor:"0"                                          // verified plasma donor, boolean value, default = "0", as string, optional
-    "stage":"1"                                                        // "0" = undiagnosed,
-                                                                       // "1" = self-diagnosed,       
-                                                                       // "2" = verified-virustest
-                                                                       // "4" = verified-immunetest-negative,
-                                                                       // "5" = verified-immunetest-positive,
-                                                                       // integer, as string, mandatory
-
-   "quarantine":"1"                                                    // "0" = shelter-at-home-commuting,
+    "vrfd-is-plasma-donor:"0"                                          // verified plasma donor, boolean value, default = "0", as string, optional
+    "quarantine":"1"                                                   // "0" = shelter-at-home-commuting,
                                                                        // "1" = shelter-at-home-permanent,  
                                                                        // "2" = ordered-at-home,       
                                                                        // "3" = hospitalized,   
