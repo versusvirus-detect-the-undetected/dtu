@@ -42,8 +42,9 @@ JSON-like diagnostic profile message record for time series, with example data.
     "agent":"d303aea7-3604-46c5-84c9-ad2758fb2852"                     // agent v4 RFC 4122 UUID e.g., see https://https://uuidgen.org/v/4, as string, mandatory
     "agent-tx-timestamp":"1586485743"                                  // agent transmission GMT time, unix UTC-timestamp, as string, mandatory
     "agent-tx-tz":"+0100"                                              // agent timezone, string concatenation of "+" or "-" with "hhmm" time format, excluding daylight saving time, as string, mandatory
-    "tx-timestamp":"1586483743"                                        // profile timestamp of GMT time, unix UTC-timestamp, as string, optional 
+    "tx-timestamp":"1586483743"                                        // profile timestamp of GMT time, unix UTC-timestamp, as string, optional
     "tx_tz":"+0100"                                                    // profile timezone, string concatenation of "+" or "-" with "hhmm" time format, excluding daylight saving time, as string, optional 
+    "country":"ch"                                                     // country ISO code, string, mandatory 
     "gps-lat:"46.9465"                                                 // GPS latitude, float value, as string, optional
     "gps-long":"7.4443"                                                // GPS longitude, float value, as string, optional
     "gps-prec":"50"                                                    // GPS precision in meters, integer as string, optional
